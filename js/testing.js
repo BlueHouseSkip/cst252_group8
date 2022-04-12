@@ -45,7 +45,9 @@ $("#sum").click(function() {
  console.log(inputAnswers);
   var similar = gravityFalls.similarity(inputAnswers);
  console.log(similar);
+ similarityArray = [];
   cartoonArray.forEach(function (e, i, r) {
+    similarityArray[i] = (cartoonArray[i].similarity(inputAnswers));
     
   });
 
