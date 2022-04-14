@@ -34,8 +34,19 @@ function Cartoon (name, answersArray, element) {
       });
     return similarityNum;
   }
-  this.enableElement = function () {
-    $(this.element).toggle();
+  // * toggles the visibility of the element associated with the cartoon
+  //   the preset parameter allows the optional feature of only toggling the
+  //   element's visibility if it's shown. It will either hide or do nothing.
+  this.toggleElement = function (toggleOnlyIfEnabled=false) {
+    if(toggleOnlyIfEnabled) {
+      //console.log("toggleOnlyIfEnabled true");
+      if($(this.element).is(":visible")) {
+        $(this.element).toggle();
+      }
+    } else {
+      //console.log("toggleOnlyIfEnabled false");
+      $(this.element).toggle();
+    }
     return;
   }
 }
@@ -48,17 +59,31 @@ function Cartoon (name, answersArray, element) {
 */
 const GRAVITYFALLS    = new Cartoon("Gravity Falls",              [1,4,2,3,2,3,1,2,4,3], "#gravityfalls");
 const RICKNMORTY      = new Cartoon("Rick and Morty",             [2,1,3,1,3,4,4,2,2,2], "#ricknmorty");
-const STARWARS        = new Cartoon("Star Wars: the Clone Wars",  [4,2,3,1,4,3,1,1,3,2], "starwars");
-const SAILORMOON      = new Cartoon("Sailor Moon",                [1,3,2,4,1,3,2,3,4,1], "sailormoon");
-const STEVEN          = new Cartoon("Steven Universe",            [3,4,4,2,1,1,3,2,2,3], "steven");
-const ARCANE          = new Cartoon("Arcane",                     [1,1,1,1,1,4,3,4,4,2], "arcane");
+const STARWARS        = new Cartoon("Star Wars: the Clone Wars",  [4,2,3,1,4,3,1,1,3,2], "#starwars");
+const SAILORMOON      = new Cartoon("Sailor Moon",                [1,3,2,4,1,3,2,3,4,1], "#sailormoon");
+const STEVEN          = new Cartoon("Steven Universe",            [3,4,4,2,1,1,3,2,2,3], "#steven");
+const ARCANE          = new Cartoon("Arcane",                     [1,1,1,1,1,4,3,4,4,2], "#arcane");
 
 const CARTOON_ARRAY = [GRAVITYFALLS, RICKNMORTY, STARWARS, SAILORMOON, STEVEN, ARCANE];
 
+// Show the quiz if its hidden, hide it if its shown
 function toggleQuizVisibility() {
   $("#quiz").toggle();
   return;
 }
+
+// get rid of all checks on the quiz
+function resetQuiz() {
+  $(":checked").prop("checked",false);
+}
+
+//whether results are shown or hidden, hide them.
+function hideResults() {
+  CARTOON_ARRAY.forEach(function (e,i,r) {
+    e.toggleElement(true);
+  });
+}
+
 // submit button clicked function
 $("#sum").click(function() {
   // * checks to see if every question is answered and stops the user if not,
@@ -93,9 +118,18 @@ $("#sum").click(function() {
   console.log(index);
   console.log(CARTOON_ARRAY[index].name);
   toggleQuizVisibility();
-  CARTOON_ARRAY[index].enableElement();
-
+  CARTOON_ARRAY[index].toggleElement();
+  $("#restart").toggle();
 });
 
+// restart button that appears with the results. resets everything allowing you to retake the quiz.
+$("#restart").click(function () {
+  if($("#restart").is(":visible")) {
+    $("#restart").toggle();
+  }
+  resetQuiz();
+  hideResults();
+  toggleQuizVisibility();
+});
 
 // more space
