@@ -10,7 +10,7 @@
   border-color: black;
   max-width: 900px;
   margin: auto;
-  padding: 5%;
+  padding: 2%;
 }
 
 #titles {
@@ -35,16 +35,36 @@
 
 
 form {
-  display: flex;
+  display: inline;
   flex-wrap: wrap;
   flex-direction: column;
+  text-align: left;
+}
+
+.question-text {
+  margin-left: 10%
 }
 
 .ui-button {
+  padding-right: 30%;
+  padding-left: 20%;
+  text-align: left;
   width: 75%;
+  margin-left: 10%
+}
+
+.ui-checkboxradio-label {
   text-align: left;
 }
 
-.ui-button text {
-  text-align: left;
+}
+input {
+    visibility:hidden;
+}
+label {
+    cursor: pointer;
+}
+
+.ui-checkboxradio-icon {
+  visibility: hidden;
 }

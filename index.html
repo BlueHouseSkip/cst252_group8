@@ -12,7 +12,8 @@
   <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.min.css">
   <script>
     $( function() {
-      $( "input" ).checkboxradio();
+      $( "input" ).checkboxradio({
+      });
     } );
   </script>
 </head>
@@ -36,14 +37,14 @@
         </div>
         <div class="question">
          <img id=titles src="img/question_2.png"><br>
-          <label><input type="radio" name="two" value="1">option 1</label>
+          <label><input type="radio" name="two" value="1"></label>
           <label><input type="radio" name="two" value="2">option 2</label><br>
           <label><input type="radio" name="two" value="3">option 3</label>
           <label><input type="radio" name="two" value="4">option 4</label><br>
         </div>
         <div class="question" id="centered">
-         <img id=titles src="img/question_3.png"><br>
-         <h3>Lorem ipsum dolor sit amet. loree af ga sasfd what ees egh s aegas asd
+         <img id=titles src="img/question_3.png">
+         <h3 class="question-text">Lorem ipsum dolor sit amet. loree af ga sasfd what ees egh s aegas asd
            <br> asd as ad  asd as dasdas da sd ad f</h3>
            <div class="answers">
             <label><input type="radio" name="three" value="1">Lorem ipsum dolor sit amet</label><br>
