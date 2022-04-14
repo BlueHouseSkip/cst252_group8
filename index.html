@@ -1,25 +1,23 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Group 8</title>
+	<title>Animation Quiz!!!</title>
 	<link rel="stylesheet" type="text/css" href="css/site.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/quiz.js" defer></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-  <script src="js/testing.js" defer></script>
+  <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+  <!--<script src="js/testing.js" defer></script>-->
+  <script src="jqueryUI/jquery-ui.min.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.min.css">
+  <script>
+    $( function() {
+      $( "input" ).checkboxradio();
+    } );
+  </script>
 </head>
 <body>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Animation Quiz!!!</title>
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="js/quiz.js" defer></script>
-      <script src="js/testing.js" defer></script>
-  	  <link rel="stylesheet" type="text/css" href="css/site.css">
-  </head>
-  <body>
-    <div id="quiz">
+    <div id="quiz" class="widget">
       <form>
         <div class="question">
          <img id=titles src="img/question_1.png"><br>
@@ -43,12 +41,17 @@
           <label><input type="radio" name="two" value="3">option 3</label>
           <label><input type="radio" name="two" value="4">option 4</label><br>
         </div>
-        <div class="question">
+        <div class="question" id="centered">
          <img id=titles src="img/question_3.png"><br>
-          <label><input type="radio" name="three" value="1">option 1</label>
-          <label><input type="radio" name="three" value="2">option 2</label><br>
-          <label><input type="radio" name="three" value="3">option 3</label>
-          <label><input type="radio" name="three" value="4">option 4</label><br>
+         <h3>Lorem ipsum dolor sit amet. loree af ga sasfd what ees egh s aegas asd
+           <br> asd as ad  asd as dasdas da sd ad f</h3>
+           <div class="answers">
+            <label><input type="radio" name="three" value="1">Lorem ipsum dolor sit amet</label><br>
+            <label><input type="radio" name="three" value="2">Lorem ipsum dolor amet</label><br>
+            <label><input type="radio" name="three" value="3">Lorem ipsum  asda dolor sit amet</label><br>
+            <label><input type="radio" name="three" value="4">Lorem ipsum dolor amet</label><br>
+            <label><input type="radio" name="three" value="5">Lorem ipsum dolor amet</label><br>
+          </div>
         </div>
         <div class="question">
          <img id=titles src="img/question_4.png"><br>
