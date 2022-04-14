@@ -130,6 +130,7 @@ $("#restart").click(function () {
   resetQuiz();
   hideResults();
   toggleQuizVisibility();
+  $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
 });
 
 // more space
