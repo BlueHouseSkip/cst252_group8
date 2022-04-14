@@ -5,10 +5,133 @@
 	<link rel="stylesheet" type="text/css" href="css/site.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/quiz.js" defer></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   <script src="js/testing.js" defer></script>
 </head>
 <body>
-  <h1>our cool website</h1>
-    <p>sample text</p>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation Quiz!!!</title>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="js/quiz.js" defer></script>
+      <script src="js/testing.js" defer></script>
+  	  <link rel="stylesheet" type="text/css" href="css/site.css">
+  </head>
+  <body>
+    <div id="quiz">
+      <form>
+        <div class="question">
+         <img id=titles src="img/question_1.png"><br>
+          <div id ="section1">
+            <label><input type="radio" name="one" value="1">option 1</label>
+          </div>
+          <div id ="section2">
+            <label><input type="radio" name="one" value="2">option 2</label><br>
+          </div>
+          <div id = "section3">
+            <label><input type="radio" name="one" value="3">option 3</label>
+          </div>
+          <div id ="section4">
+            <label><input type="radio" name="one" value="4">option 4</label><br>
+          </div>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_2.png"><br>
+          <label><input type="radio" name="two" value="1">option 1</label>
+          <label><input type="radio" name="two" value="2">option 2</label><br>
+          <label><input type="radio" name="two" value="3">option 3</label>
+          <label><input type="radio" name="two" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_3.png"><br>
+          <label><input type="radio" name="three" value="1">option 1</label>
+          <label><input type="radio" name="three" value="2">option 2</label><br>
+          <label><input type="radio" name="three" value="3">option 3</label>
+          <label><input type="radio" name="three" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_4.png"><br>
+          <label><input type="radio" name="four" value="1">option 1</label>
+          <label><input type="radio" name="four" value="2">option 2</label><br>
+          <label><input type="radio" name="four" value="3">option 3</label>
+          <label><input type="radio" name="four" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_5.png"><br>
+          <label><input type="radio" name="five" value="1">option 1</label>
+          <label><input type="radio" name="five" value="2">option 2</label><br>
+          <label><input type="radio" name="five" value="3">option 3</label>
+          <label><input type="radio" name="five" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_6.png"><br>
+          <label><input type="radio" name="six" value="1">option 1</label>
+          <label><input type="radio" name="six" value="2">option 2</label><br>
+          <label><input type="radio" name="six" value="3">option 3</label>
+          <label><input type="radio" name="six" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_7.png"><br>
+          <label><input type="radio" name="seven" value="1">option 1</label>
+          <label><input type="radio" name="seven" value="2">option 2</label><br>
+          <label><input type="radio" name="seven" value="3">option 3</label>
+          <label><input type="radio" name="seven" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_8.png"><br>
+          <label><input type="radio" name="eight" value="1">option 1</label>
+          <label><input type="radio" name="eight" value="2">option 2</label><br>
+          <label><input type="radio" name="eight" value="3">option 3</label>
+          <label><input type="radio" name="eight" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_9.png"><br>
+          <label><input type="radio" name="nine" value="1">option 1</label>
+          <label><input type="radio" name="nine" value="2">option 2</label><br>
+          <label><input type="radio" name="nine" value="3">option 3</label>
+          <label><input type="radio" name="nine" value="4">option 4</label><br>
+        </div>
+        <div class="question">
+         <img id=titles src="img/question_10.png"><br>
+          <label><input type="radio" name="ten" value="1">option 1</label>
+          <label><input type="radio" name="ten" value="2">option 2</label><br>
+          <label><input type="radio" name="ten" value="3">option 3</label>
+          <label><input type="radio" name="ten" value="4">option 4</label><br>
+        </div>
+      </form>
+      <br>
+      <button id="sum">submit</button>
+    </div>
+    <div id="results">
+      <div id="gravityfalls" style="display: none;" class="result">
+        <h1>Gravity Falls<h1>
+        <h4>description</h4>
+      </div>
+      <div id="ricknmorty" style="display: none;" class="result">
+        <h1>Rick and Morty<h1>
+        <h4>description</h4>
+      </div>
+      <div id="starwars" style="display: none;" class="result">
+        <h1>Star Wars: The Clone Wars<h1>
+        <h4>description</h4>
+      </div>
+      <div id="sailormoon" style="display: none;" class="result">
+        <h1>Sailor Moon<h1>
+        <h4>description</h4>
+      </div>
+      <div id="steven" style="display: none;" class="result">
+        <h1>Steven Universe<h1>
+        <h4>description</h4>
+      </div>
+      <div id="arcane" style="display: none;" class="result">
+        <h1>Arcane<h1>
+        <h4>description</h4>
+      </div>
+    </div>
+    <button id="restart" style="display: none;">Go Again</button>
+  </body>
+  </html>
+
 </body>
 </html>
