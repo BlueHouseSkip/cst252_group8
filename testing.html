@@ -6,9 +6,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="js/quiz.js" defer></script>
     <script src="js/testing.js" defer></script>
+	  <link rel="stylesheet" type="text/css" href="css/site.css">
 </head>
 <body>
-  <form>
+  <div id="quiz">
+    <form>
       <div class="question">
           <p><strong>Q1</strong>: question 1</p>
           <label><input type="radio" name="one" value="1">option 1</label>
@@ -79,8 +81,35 @@
         <label><input type="radio" name="ten" value="3">option 3</label>
         <label><input type="radio" name="ten" value="4">option 4</label>
       </div>
-  </form>
-<button id="sum">submit</button>
+    </form>
+    <button id="sum">submit</button>
+  </div>
+  <div id="results">
+    <div id="gravityfalls" style="display: none;" class="result">
+      <h1>Gravity Falls<h1>
+      <h4>description</h4>
+    </div>
+    <div id="ricknmorty" style="display: none;" class="result">
+      <h1>Rick and Morty<h1>
+      <h4>description</h4>
+    </div>
+    <div id="starwars" style="display: none;" class="result">
+      <h1>Star Wars: The Clone Wars<h1>
+      <h4>description</h4>
+    </div>
+    <div id="sailormoon" style="display: none;" class="result">
+      <h1>Sailor Moon<h1>
+      <h4>description</h4>
+    </div>
+    <div id="steven" style="display: none;" class="result">
+      <h1>Steven Universe<h1>
+      <h4>description</h4>
+    </div>
+    <div id="arcane" style="display: none;" class="result">
+      <h1>Arcane<h1>
+      <h4>description</h4>
+    </div>
+  </div>
 
 </body>
 </html>
