@@ -1,7 +1,14 @@
+
 .result {
   border-style: solid;
   border-width: thick;
   border-color: red;
+  padding: 2%;
+}
+
+.result h4 {
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .question {
@@ -59,14 +66,6 @@ h1 {
   /* background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple); */
 }
 
-.result-image {
-  width: 50%;
-}
-
-.result-logo {
-  width: 50%
-}
-
 form {
   display: inline;
   flex-wrap: wrap;
@@ -83,7 +82,7 @@ form {
   padding-left: 20%;
   text-align: left;
   width: 75%;
-  margin-left: 10%
+  margin-left: 10%;
 }
 
 
@@ -102,4 +101,21 @@ label {
 
 .ui-checkboxradio-icon {
   visibility: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.result-logo {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
