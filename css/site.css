@@ -15,6 +15,7 @@
   max-width: 900px;
   margin: auto;
   padding: 2%;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
 }
 
 #titles {
@@ -70,6 +71,9 @@ h1 {
 
 #description {
   max-width: 900px;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
+  text-align: center;
+  color: white;
   border-style: solid;
   border-width: thick;
   display: block;
@@ -78,7 +82,7 @@ h1 {
   border-radius: 25px;
   padding: 30px;
   border: 30px;
-  animation: 5s ease-in-out infinite color-change;
+  animation: 20s ease-in-out infinite color-change;
 }
 @keyframes color-change {
   0% {
@@ -116,7 +120,7 @@ form {
 
 #q1 {
  transform:rotate(-3deg);
- background-color: rgba(255, 99, 71, 0.4);
+ background-color: rgba(255, 99, 71);
  border-radius: 1000px;
  margin-top: 50px;
  margin-bottom: 50px;
@@ -124,13 +128,11 @@ form {
 
 #q2 {
  transform:rotate(3deg);
- background-color: rgba(134, 35, 162, 0.5);
+ background-color: rgba(134, 35, 162);
  border-radius: 1000px;
  margin-top: 50px;
  margin-bottom: 50px;
 }
-
-
 
 #sum {
   display: block;
@@ -141,6 +143,10 @@ form {
   padding: 40px;
   border-radius: 50px;
   font-size: 100px;
+}
+
+#sum:hover {
+  background-color: yellow;
 }
 
 .ui-button {
