@@ -135,6 +135,8 @@ $("#sum").click(function() {
   toggleQuizVisibility();
   CARTOON_ARRAY[index].toggleElement();
   $("#restart").toggle();
+  $("#header").toggle();
+  window.scrollTo(0,0);
 });
 
 // restart button that appears with the results. resets everything allowing you to retake the quiz.
@@ -145,7 +147,9 @@ $("#restart").click(function () {
   resetQuiz();
   hideResults();
   toggleQuizVisibility();
+  $("#header").toggle();
   $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
+  window.scrollTo(0,0);
 });
 
 
