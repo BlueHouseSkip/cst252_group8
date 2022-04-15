@@ -64,16 +64,16 @@ const GRAVITYFALLS    = new Cartoon("Gravity Falls",              [3,2,4,3,1,2,1
 const RICKNMORTY      = new Cartoon("Rick and Morty",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3], "#ricknmorty");
 const STARWARS        = new Cartoon("Star Wars: the Clone Wars",  [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3], "#starwars");
 const SAILORMOON      = new Cartoon("Sailor Moon",                [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5], "#sailormoon");
-const STEVEN          = new Cartoon("Steven Universe",            [], "#steven");
+const STEVEN          = new Cartoon("Steven Universe",            [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], "#steven");
 const ARCANE          = new Cartoon("Arcane",                     [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1], "#arcane");
-const REGULAR         = new Cartoon("Regular Show",               [], "#regular");
-const MIDNIGHT        = new Cartoon("Midnight Gospel",            [], "#midnight");
-const ONEPIECE        = new Cartoon("One Piece",                  [], "#onepiece");
+const REGULAR         = new Cartoon("Regular Show",               [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1], "#regular");
+const MIDNIGHT        = new Cartoon("Midnight Gospel",            [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3], "#midnight");
+const ONEPIECE        = new Cartoon("One Piece",                  [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4], "#onepiece");
 const SPONGEBOB       = new Cartoon("Spongebob Squarepants",      [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4], "#spongebob");
 const POKEMON         = new Cartoon("Pokemon",                    [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4], "#pokemon");
 const AVATAR          = new Cartoon("Avatar",                     [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2], "#avatar");
 
-const CARTOON_ARRAY = [GRAVITYFALLS, RICKNMORTY, STARWARS, SAILORMOON, STEVEN, ARCANE];
+const CARTOON_ARRAY = [GRAVITYFALLS, RICKNMORTY, STARWARS, SAILORMOON, STEVEN, ARCANE, REGULAR, MIDNIGHT, ONEPIECE, SPONGEBOB, POKEMON, AVATAR];
 
 // Show the quiz if its hidden, hide it if its shown
 function toggleQuizVisibility() {
