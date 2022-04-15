@@ -7,8 +7,8 @@
 }
 
 .result h4 {
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .question {
@@ -33,6 +33,43 @@ h1 {
   text-align: center;
   text-decoration: underline;
 }
+
+#starwars {
+  background-color: black;
+  color: yellow;
+}
+#sailormoon {
+ background-color: #f8a4fc;
+}
+#arcane {
+  
+}
+#gravityfalls {
+  background-color: #c49e7c;
+}
+#ricknmorty {
+  background-color: #f7f36f;
+}
+#regular {
+  background-color: #a6e1ff;
+}
+#midnight {
+  background-color: #ffb387;
+}
+#onepiece {
+  background-color: #82e6ff;
+}
+#spongebob {
+  background-color: #7dc7ff;
+}
+#pokemon {
+  background-color: #2592fb;
+}
+#avatar {
+  background-color: #903a07;
+}
+
+
 
 #description {
   max-width: 900px;
