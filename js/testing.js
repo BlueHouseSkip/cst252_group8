@@ -1,5 +1,5 @@
 
-
+//import * as confetti from "../confetti/confetti.js";
 //THE WHAT: a program that works with a buzzfeed quiz styled page to get answers to questions and math them to cartoons
 
 //THE HOW: There is an array containing every cartoon with a list of correct answers for that cartoon.
@@ -13,6 +13,7 @@
 //         This is especially true with a low amount of questions
 
 //         NOTE: At least 15 questions is recommended for best results
+
 
 
 // weight is how much to count each question as. decimal percent so 1 is 100%, .5 is 50%, 2 is 200%, etc.
@@ -63,6 +64,12 @@ const STARWARS        = new Cartoon("Star Wars: the Clone Wars",  [4,2,3,1,4,3,1
 const SAILORMOON      = new Cartoon("Sailor Moon",                [1,3,2,4,1,3,2,3,4,1], "#sailormoon");
 const STEVEN          = new Cartoon("Steven Universe",            [3,4,4,2,1,1,3,2,2,3], "#steven");
 const ARCANE          = new Cartoon("Arcane",                     [1,1,1,1,1,4,3,4,4,2], "#arcane");
+const REGULAR         = new Cartoon("Regular Show",               [1,4,2,3,2,3,1,2,4,3], "#regular");
+const MIDNIGHT        = new Cartoon("Midnight Gospel",            [1,4,2,3,2,3,1,2,4,3], "#midnight");
+const ONEPIECE        = new Cartoon("One Piece",                  [1,4,2,3,2,3,1,2,4,3], "#onepiece");
+const SPONGEBOB       = new Cartoon("Spongebob Squarepants",      [1,4,2,3,2,3,1,2,4,3], "#spongebob");
+const POKEMON         = new Cartoon("Pokemon",                    [1,4,2,3,2,3,1,2,4,3], "#pokemon");
+const AVATAR          = new Cartoon("Avatar",                     [1,4,2,3,2,3,1,2,4,3], "#avatar");
 
 const CARTOON_ARRAY = [GRAVITYFALLS, RICKNMORTY, STARWARS, SAILORMOON, STEVEN, ARCANE];
 
@@ -132,5 +139,8 @@ $("#restart").click(function () {
   toggleQuizVisibility();
   $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
 });
+
+
+
 
 // more space

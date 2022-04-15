@@ -9,8 +9,9 @@
     <script src="jqueryUI/jquery-ui.min.js" defer></script>
 	  <link rel="stylesheet" type="text/css" href="css/site.css">
     <link rel="stylesheet" type="text/css" href="css/testing.css">
-    <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.min.css">
+    <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.css">
+    <script src="./confetti/confetti.js"></script>
     <script>
       $( function() {
         $( "input" ).checkboxradio();
@@ -122,4 +123,28 @@
   </div>
   <button id="restart" style="display: none;">Go Again</button>
 </body>
+<script>
+  const start = () => {
+      setTimeout(function() {
+          confetti.start()
+      }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+  };
+
+  //  Stop
+
+  const stop = () => {
+      setTimeout(function() {
+          confetti.stop()
+      }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+  };
+
+
+  function callConfetti() {
+    start();
+    stop();
+  }
+  $("#sum").click(function () {
+    callConfetti();
+  });
+</script>
 </html>
