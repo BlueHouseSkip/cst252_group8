@@ -59,6 +59,14 @@ h1 {
   /* background-image: linear-gradient(to right, red, orange, yellow, green, blue, purple); */
 }
 
+.result-image {
+  width: 50%;
+}
+
+.result-logo {
+  width: 50%
+}
+
 form {
   display: inline;
   flex-wrap: wrap;
@@ -77,6 +85,8 @@ form {
   width: 75%;
   margin-left: 10%
 }
+
+
 
 .ui-checkboxradio-label {
   text-align: left;
