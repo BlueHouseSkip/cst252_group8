@@ -2,7 +2,13 @@
 .result {
   padding: 2%;
   border-radius: 20px;
-  font-family: "Comic Sans MS", "Comic Sans", serif;;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  margin-top: 30px;
+  margin-top: 30px;
 }
 
 .result h4 {
@@ -16,12 +22,17 @@
   margin: auto;
   padding: 2%;
   font-family: "Comic Sans MS", "Comic Sans", serif;
+
+}
+
+.question:hover {
+  transform: rotateY(360deg);
 }
 
 .question p {
   font-size: 25px;
   color: white;
-  text-shadow: 2px 4px 4px rgba(1,1,1,0.1);
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #titles {
@@ -97,6 +108,10 @@ body {
 
 body, html {
   height: 100%;
+}
+
+body {
+  background-color: #b6b6b6;
 }
 
 
@@ -191,6 +206,7 @@ form {
   font-family: "Comic Sans MS", "Comic Sans", serif;
   text-shadow: 1px 1px 2px red, 2px 2px 2px orange, 3px 3px 2px yellow, 4px 4px 2px green, 5px 5px 2px blue, 6px 6px 2px purple;
   box-shadow: 1px 1px 5px red, 2px 2px 5px orange, 3px 3px 5px yellow, 4px 4px 5px green, 5px 5px 5px blue, 6px 6px 5px purple;
+  margin-bottom: 50px;
 }
 
 #sum:hover {
@@ -211,11 +227,12 @@ form {
   font-family: "Comic Sans MS", "Comic Sans", serif;
   text-shadow: 1px 1px 2px red, 2px 2px 2px orange, 3px 3px 2px yellow, 4px 4px 2px green, 5px 5px 2px blue, 6px 6px 2px purple;
   box-shadow: 1px 1px 5px red, 2px 2px 5px orange, 3px 3px 5px yellow, 4px 4px 5px green, 5px 5px 5px blue, 6px 6px 5px purple;
+  margin-top: 30px;
+  margin-bottom: 30%;
 }
 
 #restart:hover {
   background-color: yellow;
-  transform: rotate(360deg);
 }
 
 
@@ -259,6 +276,3 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
-
-////////////

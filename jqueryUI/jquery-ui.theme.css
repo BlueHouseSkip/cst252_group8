@@ -61,9 +61,11 @@ works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
 	border: 1px solid #c5c5c5;
-	background: #f6f6f6;
+	background: #c3ecf7;
+
 	font-weight: normal;
 	color: #454545;
+	background-image: linear-gradient(rgba(204, 224, 230, .84), rgba(250, 254, 255, .84) 50%);
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -84,7 +86,7 @@ a:visited.ui-button,
 .ui-button:hover,
 .ui-button:focus {
 	border: 1px solid #cccccc;
-	background: #ededed;
+	background-image: linear-gradient(rgba(250, 254, 255, .84), rgba(167, 192, 199, .84) 50%);
 	font-weight: normal;
 	color: #2b2b2b;
 }
