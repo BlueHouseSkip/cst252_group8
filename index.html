@@ -8,6 +8,7 @@
   <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
   <!--<script src="js/testing.js" defer></script>-->
   <script src="jqueryUI/jquery-ui.min.js" defer></script>
+  <script src="parallax/parallax.js"></script>
   <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.css">
 
@@ -16,10 +17,10 @@
       $( "input" ).checkboxradio({
       });
     } );
-    showAllResults ();
   </script>
 </head>
 <body>
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/jazz4.png" class="fullDiv">
   <div id="header">
    <h1>Cartoon Quiz!!1!</h1>
     <p id="description">Are you <b>bored</b> and looking for something to watch? Do you like <b>cartoons</b>? Do you like answering questions? Well do we
@@ -321,6 +322,7 @@
       </div>
     </div>
     <button id="restart" style="display: none;">Go Again</button>
+  </div>
   </body>
   </html>
 

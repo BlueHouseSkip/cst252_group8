@@ -152,7 +152,5 @@ $("#restart").click(function () {
   window.scrollTo(0,0);
 });
 
-
-showAllResults ();  
-
-// more space
+//$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'})
+showAllResults ();
