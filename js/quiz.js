@@ -154,3 +154,36 @@ $("#restart").click(function () {
 
 //$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'})
 showAllResults ();
+
+function syncDelay(milliseconds){
+ var start = new Date().getTime();
+ var end=0;
+ while( (end-start) < milliseconds){
+     end = new Date().getTime();
+ }
+}
+
+setInterval(obnoxiousFlash,700);
+
+function obnoxiousFlash () {
+  if($("#sum").css("background-color") == "rgb(255, 255, 0)") {
+    $("#sum").css("background-color", "red");
+  } else {
+    $("#sum").css("background-color", "yellow");
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// comment
