@@ -153,7 +153,6 @@ $("#restart").click(function () {
 });
 
 //$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'})
-showAllResults ();
 
 function syncDelay(milliseconds){
  var start = new Date().getTime();

@@ -193,6 +193,7 @@ form {
 }
 
 #sum {
+  cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -214,6 +215,7 @@ form {
 }
 
 #restart {
+  cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
