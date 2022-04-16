@@ -153,6 +153,6 @@ $("#restart").click(function () {
 });
 
 
-
+showAllResults ();  
 
 // more space

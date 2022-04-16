@@ -8,20 +8,22 @@
   <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
   <!--<script src="js/testing.js" defer></script>-->
   <script src="jqueryUI/jquery-ui.min.js" defer></script>
-  <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.min.css">
-  <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.min.css">
+  <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.css">
+
   <script>
     $( function() {
       $( "input" ).checkboxradio({
       });
     } );
+    showAllResults ();
   </script>
 </head>
 <body>
   <div id="header">
    <h1>Cartoon Quiz!!1!</h1>
-    <p id="description">Are you bored and looking for something to watch? Do you like cartoons? Do you like answering questions? Well do we
-      have the quiz for you! Answer the questions below to find the cartoon of your dreams! <br> Or not XD </p>
+    <p id="description">Are you <b>bored</b> and looking for something to watch? Do you like <b>cartoons</b>? Do you like answering questions? Well do we
+      have the quiz for you! Answer the questions below to find the <b>cartoon of your dreams!</b> <br> Or not XD </p>
   </div>
 
 
@@ -200,7 +202,7 @@
         </div>
       </form>
       <br>
-      <button id="sum">submit</button>
+      <button id="sum">SUBMIT</button>
     </div>
     <div id="results">
       <div id="gravityfalls" style="display: none;" class="result">
@@ -239,12 +241,22 @@
       </div>
       <div id="sailormoon" style="display: none;" class="result">
         <img class="result-logo" src="img/sailormoonlogo.png"><br>
-        <h4>description</h4>
+        <h4>The show we recommend for you is: Sailor Moon! Sailor Moon is an anime
+          about school girl Usagi Tsukino. Usagi meets a magical talking cat named
+          Luna who gives her the power to transform into a magical alter ego known
+          as Sailor Moon. Usagi and a few other Sailor Soldiers who join her along the
+          way battle against the Dark Kingdom in a quest to obtain the Silver Crystal,
+          a gem capable of limitless power. Sailor Moon is available on Hulu.</h4>
         <img class="result-image" src="img/sailormoon.jpg">
       </div>
       <div id="steven" style="display: none;" class="result">
         <img class="result-logo" src="img/stevenlogo.png"><br>
-        <h4>description</h4>
+        <h4>The show we recommend for you is: Steven Universe! Steven Universe is a
+          coming of age show about Steven and the three alien gem warriors he lives with.
+          Together, they fight to protect the Earth from forces beyond the stars white Steven
+          struggles to discover who he really is. This feel good show full of adventure and catchy
+          songs is sure to appeal to your taste! This show is available on Hulu and HBO Max.
+</h4>
         <img class="result-image" src="img/steven.jpg">
       </div>
       <div id="arcane" style="display: none;" class="result">
@@ -292,7 +304,9 @@
       </div>
       <div id="pokemon" style="display: none;" class="result">
         <img class="result-logo" src="img/pokemonlogo.png"><br>
-        <h4>description</h4>
+        <h4>The show we recommend for you is: Pokémon! Pokemon is an anime about 10 year
+          old Ash Ketchum and his aspiration to become the greatest Pokémon (pocket monster)
+          trainer in the world. Gotta catch ‘em all! Pokémon is available on Netflix.</h4>
         <img class="result-image" src="img/pokemon.jpg">
       </div>
       <div id="avatar" style="display: none;" class="result">
