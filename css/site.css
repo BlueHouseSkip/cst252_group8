@@ -18,6 +18,12 @@
   font-family: "Comic Sans MS", "Comic Sans", serif;
 }
 
+.question p {
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 4px 4px rgba(1,1,1,0.1);
+}
+
 #titles {
   max-width: 300px;
   display: block;
@@ -82,7 +88,7 @@ h1 {
   background-image: linear-gradient(to bottom right, #ffffff, #ffc2fd);
   color: #de3902;
 }
-/*
+/*f
 body {
   background-image: url("../img/jazz2.png");
   background-repeat: repeat;
@@ -94,7 +100,7 @@ body, html {
 }
 
 
-#fullDiv {
+#parallax-window {
     height: 100%;
     width: 100%;
     left: 0;
@@ -190,6 +196,28 @@ form {
 #sum:hover {
   background-color: yellow;
 }
+
+#restart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-size: 100px;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
+  text-shadow: 1px 1px 2px red, 2px 2px 2px orange, 3px 3px 2px yellow, 4px 4px 2px green, 5px 5px 2px blue, 6px 6px 2px purple;
+  box-shadow: 1px 1px 5px red, 2px 2px 5px orange, 3px 3px 5px yellow, 4px 4px 5px green, 5px 5px 5px blue, 6px 6px 5px purple;
+}
+
+#restart:hover {
+  background-color: yellow;
+  transform: rotate(360deg);
+}
+
 
 .ui-button {
   padding-right: 30%;
