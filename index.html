@@ -9,6 +9,7 @@
   <!--<script src="js/testing.js" defer></script>-->
   <script src="jqueryUI/jquery-ui.min.js" defer></script>
   <script src="parallax/parallax.js"></script>
+  <script src="./confetti/confetti.js"></script>
   <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="jqueryUI/jquery-ui.theme.css">
 
@@ -325,7 +326,28 @@
     <button id="restart" style="display: none;">Go Again</button>
   </div>
   </body>
-  </html>
+  <script>
+    const start = () => {
+        setTimeout(function() {
+            confetti.start()
+        }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+    };
 
-</body>
-</html>
+    //  Stop
+
+    const stop = () => {
+        setTimeout(function() {
+            confetti.stop()
+        }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+    };
+
+
+    function callConfetti() {
+      start();
+      stop();
+    }
+    $("#sum").click(function () {
+      //callConfetti();
+    });
+  </script>
+  </html>

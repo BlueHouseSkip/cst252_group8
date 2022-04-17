@@ -123,6 +123,7 @@ $("#sum").click(function() {
   });
   console.log("similarity:");
   console.log(similarityArray);
+  callConfetti();
   // * Math.max() gets the largest number in the array, it's set as max
   //   which is passed as the parameter in indexOf() which allows it to find
   //   the position of the largest number in the array, which is set as index.
@@ -137,6 +138,7 @@ $("#sum").click(function() {
   $("#restart").toggle();
   $("#header").toggle();
   window.scrollTo(0,0);
+  jQuery(window).trigger('resize').trigger('scroll');
 });
 
 // restart button that appears with the results. resets everything allowing you to retake the quiz.
@@ -147,20 +149,14 @@ $("#restart").click(function () {
   resetQuiz();
   hideResults();
   toggleQuizVisibility();
+
   $("#header").toggle();
   $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
   window.scrollTo(0,0);
+  jQuery(window).trigger('resize').trigger('scroll');
 });
 
 //$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'})
-
-function syncDelay(milliseconds){
- var start = new Date().getTime();
- var end=0;
- while( (end-start) < milliseconds){
-     end = new Date().getTime();
- }
-}
 
 setInterval(obnoxiousFlash,700);
 
