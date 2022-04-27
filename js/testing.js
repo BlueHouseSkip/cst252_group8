@@ -15,7 +15,6 @@
 //         NOTE: At least 15 questions is recommended for best results
 
 
-
 // weight is how much to count each question as. decimal percent so 1 is 100%, .5 is 50%, 2 is 200%, etc.
 const WEIGHT = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 

@@ -1,14 +1,20 @@
 
 .result {
-  border-style: solid;
-  border-width: thick;
-  border-color: red;
   padding: 2%;
+  border-radius: 20px;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  margin-top: 30px;
+  margin-top: 30px;
 }
 
 .result h4 {
   padding-left: 10%;
   padding-right: 10%;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
 }
 
 .question {
@@ -16,6 +22,17 @@
   margin: auto;
   padding: 2%;
   font-family: "Comic Sans MS", "Comic Sans", serif;
+
+}
+
+.question:hover {
+  transform: rotateY(360deg);
+}
+
+.question p {
+  font-size: 25px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #titles {
@@ -30,44 +47,82 @@
 h1 {
   text-align: center;
   text-decoration: underline;
+  padding: 30px;
 }
 
 #starwars {
-  background-color: black;
+  background-image: linear-gradient(to bottom right, #454545, black);
   color: yellow;
 }
 #sailormoon {
- background-color: #f8a4fc;
+ background-image: linear-gradient(to bottom right, #f8a4fc, #b8c3ff);
+ color: #781c85;
 }
 #arcane {
-
+ background-image: linear-gradient(to bottom right, #ffffff, #23257a);
+ color: #6e5000;
 }
 #gravityfalls {
-  background-color: #c49e7c;
+ background-image: linear-gradient(to bottom right, #fff4b0, #6e5221);
+ color: #33270f;
 }
 #ricknmorty {
-  background-color: #f7f36f;
+  background-image: linear-gradient(to bottom right, #f7f36f, #59e3de);
+  color: #2b5394;
 }
 #regular {
-  background-color: #a6e1ff;
+  background-image: linear-gradient(to bottom right, #a6e1ff, #90d192);
+  color: #ffffff;
+  text-shadow: 2px 4px 4px rgba(0,0,0,0.1);
 }
 #midnight {
-  background-color: #ffb387;
+  background-image: linear-gradient(to bottom right, #ffb387, #a611a8);
+  color: #ffe0f4;
 }
 #onepiece {
-  background-color: #82e6ff;
+  background-image: linear-gradient(to bottom right, #82e6ff, #3530d9);
+  color: #00209e;
 }
 #spongebob {
-  background-color: #7dc7ff;
+  background-image: linear-gradient(to bottom right, #7dc7ff, #ebe5c3);
+  color: #18308f;
 }
 #pokemon {
-  background-color: #2592fb;
+  background-image: linear-gradient(to bottom right, #2592fb, #ffffff);
+  color: #18308f;
 }
 #avatar {
-  background-color: #903a07;
+  background-image: linear-gradient(to bottom right, #903a07, #f0e354);
+  color: #1f1e1c;
+}
+#steven    {
+  background-image: linear-gradient(to bottom right, #ffffff, #ffc2fd);
+  color: #de3902;
+}
+/*f
+body {
+  background-image: url("../img/jazz2.png");
+  background-repeat: repeat;
+}
+*/
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: #b6b6b6;
 }
 
 
+#parallax-window {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+}
 
 #description {
   max-width: 900px;
@@ -80,9 +135,12 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
-  padding: 30px;
+  padding: 12px;
   border: 30px;
+  line-height: 40px;
+  font-size: 17px;
   animation: 20s ease-in-out infinite color-change;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 20px;
 }
 @keyframes color-change {
   0% {
@@ -119,35 +177,66 @@ form {
 }
 
 #q1 {
- transform:rotate(-3deg);
- background-color: rgba(255, 99, 71);
- border-radius: 1000px;
- margin-top: 50px;
- margin-bottom: 50px;
+ transform:rotate(-2deg);
+ background-color: rgba(4, 196, 199, .7);
+ border-radius: 0px;
+ margin-top: 40px;
+ margin-bottom: 30px;
 }
 
 #q2 {
- transform:rotate(3deg);
- background-color: rgba(134, 35, 162);
- border-radius: 1000px;
- margin-top: 50px;
- margin-bottom: 50px;
+ transform:rotate(2deg);
+ background-color: rgba(160, 43, 175, .7);
+ border-radius: 0px;
+ margin-top: 30px;
+ margin-bottom: 30px;
 }
 
 #sum {
+  cursor: pointer;
   display: block;
   margin-left: auto;
   margin-right: auto;
   background-color: red;
   border: none;
-  padding: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
   border-radius: 50px;
   font-size: 100px;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
+  text-shadow: 1px 1px 2px red, 2px 2px 2px orange, 3px 3px 2px yellow, 4px 4px 2px green, 5px 5px 2px blue, 6px 6px 2px purple;
+  box-shadow: 1px 1px 5px red, 2px 2px 5px orange, 3px 3px 5px yellow, 4px 4px 5px green, 5px 5px 5px blue, 6px 6px 5px purple;
+  margin-bottom: 50px;
 }
 
 #sum:hover {
   background-color: yellow;
 }
+
+#restart {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
+  border: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  font-size: 100px;
+  font-family: "Comic Sans MS", "Comic Sans", serif;
+  text-shadow: 1px 1px 2px red, 2px 2px 2px orange, 3px 3px 2px yellow, 4px 4px 2px green, 5px 5px 2px blue, 6px 6px 2px purple;
+  box-shadow: 1px 1px 5px red, 2px 2px 5px orange, 3px 3px 5px yellow, 4px 4px 5px green, 5px 5px 5px blue, 6px 6px 5px purple;
+  margin-top: 30px;
+  margin-bottom: 5%;
+}
+
+#restart:hover {
+  background-color: yellow;
+}
+
 
 .ui-button {
   padding-right: 30%;
@@ -189,6 +278,3 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
-
-////////////
