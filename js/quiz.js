@@ -152,6 +152,7 @@ $("#restart").click(function () {
 
   $("#header").toggle();
   $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
+  $(".none").prop('checked',true);
   window.scrollTo(0,0);
   jQuery(window).trigger('resize').trigger('scroll');
 });
@@ -159,6 +160,8 @@ $("#restart").click(function () {
 //$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'})
 
 setInterval(obnoxiousFlash,700);
+
+
 
 function obnoxiousFlash () {
   if($("#sum").css("background-color") == "rgb(255, 255, 0)") {
