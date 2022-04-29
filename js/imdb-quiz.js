@@ -29,18 +29,18 @@ function Tagset (name, answersArray, tagName) {
 
         each new cartoon must be declared and then added to the CARTOON_ARRAY variable.
 */
-const MONSTER          = new Tagset("Gravity Falls",              [3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1,2], "monster");
-const SATIRE           = new Tagset("Rick and Morty",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3], "satire");
-const ADULT            = new Tagset("Star Wars: the Clone Wars",  [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3], "adult animation");
-const CARTOONNETWORK   = new Tagset("Sailor Moon",                [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5], "cartoon network");
-const NICK             = new Tagset("Steven Universe",            [3,2,4,2,2,2,3,4,5,4,4,1,4,2,5,1,1,1,1,2,3], "nickelodeon");
-const ADULTSWIM        = new Tagset("Arcane",                     [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1], "adult swim");
-const WEIRD            = new Tagset("Regular Show",               [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1], "weird");
-const FRIENDSHIP       = new Tagset("Midnight Gospel",            [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3], "friendship");
-const APOCALYPSE       = new Tagset("One Piece",                  [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4], "apocalypse");
-const DARKCOMEDY       = new Tagset("Spongebob Squarepants",      [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4], "dark comedy");
-const MAGIC            = new Tagset("Pokemon",                    [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4], "magic");
-const SURREALISM       = new Tagset("Avatar",                     [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2], "surrealism");
+const MONSTER          = new Tagset("Monster",            [3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1,2], "monster");
+const SATIRE           = new Tagset("Satire",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3], "satire");
+const ADULT            = new Tagset("Adult Animation",    [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3], "adult animation");
+const CARTOONNETWORK   = new Tagset("Cartoon Network",    [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5], "cartoon network");
+const NICK             = new Tagset("Nickelodeon",        [3,2,4,2,2,2,3,4,5,4,4,1,4,2,5,1,1,1,1,2,3], "nickelodeon");
+const ADULTSWIM        = new Tagset("Adult Swim",         [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1], "adult swim");
+const WEIRD            = new Tagset("Weird",              [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1], "weird");
+const FRIENDSHIP       = new Tagset("Friendship",         [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3], "friendship");
+const APOCALYPSE       = new Tagset("Apocalypse",         [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4], "apocalypse");
+const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4], "dark comedy");
+const MAGIC            = new Tagset("Magic",              [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4], "magic");
+const SURREALISM       = new Tagset("Surrealism",         [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2], "surrealism");
 
 const TAGSET_ARRAY = [MONSTER, SATIRE, ADULT, CARTOONNETWORK, NICK, ADULTSWIM, WEIRD, FRIENDSHIP, APOCALYPSE, DARKCOMEDY, MAGIC, SURREALISM];
 
@@ -53,6 +53,7 @@ function toggleQuizVisibility() {
 // get rid of all checks on the quiz
 function resetQuiz() {
   $(":checked").prop("checked",false);
+  $(".none").prop('checked',true);
 }
 
 //whether results are shown or hidden, hide them.
@@ -121,7 +122,7 @@ $("#restart").click(function () {
 
   $("#header").toggle();
   $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
-  $(".none").prop('checked',true);
+  //$(".none").prop('checked',true);
   window.scrollTo(0,0);
   jQuery(window).trigger('resize').trigger('scroll');
 });
