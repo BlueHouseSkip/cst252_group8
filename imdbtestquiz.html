@@ -4,8 +4,8 @@
  <title>Animation Quiz</title>
  <link rel="stylesheet" type="text/css" href="css/site.css">
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
- <script src="js/quiz.js" defer></script>
- <script src="js/imdb.js" defer></script>
+ <script src="js/imdb-quiz.js" defer></script>
+ <!--<script src="js/imdb.js" defer></script>-->
  <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
  <!--<script src="js/testing.js" defer></script>-->
  <script src="jqueryUI/jquery-ui.min.js" defer></script>
@@ -208,124 +208,20 @@
      <br>
      <button id="sum">SUBMIT</button><br><br>
    </div>
-   <div id="results">
-     <div id="gravityfalls" style="display: none;" class="result">
-       <img class="result-logo" src="img/gravityfallslogo.png"><br>
-       <h4>Congratulations you have been given Gravity Falls. The beloved Disney
-         channel show is about the adventures of twins Dipper and Mabel as they
-         explore the mysteries of a town called Gravity Falls. The show is good
-         for people of all ages, meta comedy, and a brilliant overarching story.
-         The show has many memorable side characters and creatures and captures
-         the feeling of summer. The show has a great fanbase and the episodes
-         contain little messages that the community come together to decipher.
-         Available on Disney+.</h4>
-       <img class="result-image" src="img/gravityfalls.jpg">
-     </div>
-     <div id="ricknmorty" style="display: none;" class="result">
-       <img class="result-logo" src="img/ricknmortylogo.png"><br>
-       <h4>Congratulations you have been given Rick and Morty. It is the hit Sci
-          fi show about a boy and his grandpa traveling the universe. The show
-          is for a mature audience and has a mix of dark and obscene humor. We
-          think this is for you because it deals with themes of isolation, intelligence,
-           alcoholism, and family. The sci-fi has some of the smartest concepts compared
-           to most shows. The show can be watched in sequence or in any order for most
-           episodes. Available on HBOMax.</h4>
-         <img class="result-image" src="img/ricknmorty.jpg">
-     </div>
-     <div id="starwars" style="display: none;" class="result">
-       <img class="result-logo" src="img/starwarslogo.png"><br>
-       <h4>Congratulations you have been given Clone Wars. Clone Wars is the
-         anthology series that takes place in between episode 2 and 3 of the
-         Star Wars Saga. There are 7 seasons that deal with mature themes and
-         character growth. You'll like this for the war stories and characters
-         that you'll come to bond with. If you like Clone Wars there are even
-         two spin off shows that you can watch if you are craving more star wars
-         content. Available on Disney+</h4>
-       <img class="result-image" src="img/starwars.jpg">
-     </div>
-     <div id="sailormoon" style="display: none;" class="result">
-       <img class="result-logo" src="img/sailormoonlogo.png"><br>
-       <h4>The show we recommend for you is: Sailor Moon! Sailor Moon is an anime
-         about school girl Usagi Tsukino. Usagi meets a magical talking cat named
-         Luna who gives her the power to transform into a magical alter ego known
-         as Sailor Moon. Usagi and a few other Sailor Soldiers who join her along the
-         way battle against the Dark Kingdom in a quest to obtain the Silver Crystal,
-         a gem capable of limitless power. Sailor Moon is available on Hulu.</h4>
-       <img class="result-image" src="img/sailormoon.jpg">
-     </div>
-     <div id="steven" style="display: none;" class="result">
-       <img class="result-logo" src="img/stevenlogo.png"><br>
-       <h4>The show we recommend for you is: Steven Universe! Steven Universe is a
-         coming of age show about Steven and the three alien gem warriors he lives with.
-         Together, they fight to protect the Earth from forces beyond the stars white Steven
-         struggles to discover who he really is. This feel good show full of adventure and catchy
-         songs is sure to appeal to your taste! This show is available on Hulu and HBO Max.
-</h4>
-       <img class="result-image" src="img/steven.jpg">
-     </div>
-     <div id="arcane" style="display: none;" class="result">
-       <img class="result-logo" src="img/arcanelogo.png"><br>
-       <h4>Congratulations you have been given Arcane. Arcane is based on the hit
-         MOBA game League of Legends. It's a multilayered show with themes about
-         class conflict, sisterhood, and addiction. The animation style is similar
-         to Into the Spiderverse. We believe it fits you because it is a good binge
-         for a compelling story. The complex characters make for an interesting story.
-         If you play the game this is definitely a must watch. Available on Netflix.</h4>
-       <img class="result-image" src="img/arcane.jpg">
-     </div>
-     <div id="regular" style="display: none;" class="result">
-       <img class="result-logo" src="img/regularlogo.png"><br>
-       <h4>The show we recommend for you is: Regular Show! This show is about
-         two friends, a blue jay named Mordecai and a raccoon named Rigby. They
-          are groundskeepers at a park who love to slack off and not do their
-          work. Their everyday problems often lead to out of this world adventures.
-          Regular Show is available on Hulu and HBO MAX.</h4>
-          <img class="result-image" src="img/regular.jpg">
-     </div>
-     <div id="midnight" style="display: none;" class="result">
-       <img class="result-logo" src="img/midnightlogo.png"><br>
-       <h4>The show we recommend for you is: The Midnight Gospel! This show is
-         about Clancy who is a spacecaster (space podcaster). He has a multiverse
-         simulator which he uses to travel to different worlds and interview people.
-         This show is targeted towards adults, and is available on Netflix.</h4>
-         <img class="result-image" src="img/midnight.jpg">
-     </div>
-     <div id="onepiece" style="display: none;" class="result">
-       <img class="result-logo" src="img/onepiecelogo.png"><br>
-       <h4>The show we recommend for you is: One Piece! One piece is an anime about
-         Monkey D. Luffy, and his quest to find the mythical treasure known as the
-         One Piece, and in the process become the King of the Pirates. One Piece
-         is available on Netflix, Hulu, Crunchyroll, and Funimation.</h4>
-         <img class="result-image" src="img/onepiece.jpg">
-     </div>
-     <div id="spongebob" style="display: none;" class="result">
-       <img class="result-logo" src="img/spongeboblogo.png"><br>
-       <h4>Congratulations you got Spongebob. Everyone knows Spongebob. The hit
-          nickelodeon show has been playing for decades. With very memorable episodes
-          and quotable lines it is beloved by all. The show is also known for its memes.
-          Available on Amazon Prime.</h4>
-          <img class="result-image" src="img/spongebob.jpg">
-     </div>
-     <div id="pokemon" style="display: none;" class="result">
-       <img class="result-logo" src="img/pokemonlogo.png"><br>
-       <h4>The show we recommend for you is: Pokémon! Pokemon is an anime about 10 year
-         old Ash Ketchum and his aspiration to become the greatest Pokémon (pocket monster)
-         trainer in the world. Gotta catch ‘em all! Pokémon is available on Netflix.</h4>
-       <img class="result-image" src="img/pokemon.jpg">
-     </div>
-     <div id="avatar" style="display: none;" class="result">
-       <img class="result-logo" src="img/avatarlogo.png"><br>
-       <h4>Congratulations you got Avatar. Avatar is a huge fantasy world where
-          people can bend the elements. The story follows aang who can bend all
-          the elements who must train to defeat the fire nation. It takes many
-          inspirations from asian and indigeonous culture. The characters are
-          fun and relatable and the world is rich with lore. There is also a
-          spinoff show called Korra that is just as good. Available on Netflix.</h4>
-          <img class="result-image" src="img/avatar.jpg">
-     </div>
+   <div id="loading" style="display: none;">
+     <h1>LOADING PLEASE WAIT...</h1>
+   </div>
+   <div id="output">
+
+   </div>
+   <div id="retry" style="display: none;">
+     <h1>Something went wrong fetching your results, press the button below to retry</h1>
+     <button id="retry-button">Retry</button>
    </div>
    <button id="restart" style="display: none;">Go Again</button><br><br>
+
  </div>
+
  </body>
  <script>
    const start = () => {

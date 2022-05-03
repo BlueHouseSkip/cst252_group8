@@ -20,7 +20,6 @@ function Tagset (name, answersArray, tagName) {
       });
     return similarityNum;
   }
-
 }
 
 /*
@@ -31,22 +30,26 @@ function Tagset (name, answersArray, tagName) {
 */
 const MONSTER          = new Tagset("Monster",            [3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1,2], "monster");
 const SATIRE           = new Tagset("Satire",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3], "satire");
-const ADULT            = new Tagset("Adult Animation",    [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3], "adult animation");
-const CARTOONNETWORK   = new Tagset("Cartoon Network",    [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5], "cartoon network");
+const ADULT            = new Tagset("Adult Animation",    [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3], "adult-animation");
+const CARTOONNETWORK   = new Tagset("Cartoon Network",    [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5], "cartoon-network");
 const NICK             = new Tagset("Nickelodeon",        [3,2,4,2,2,2,3,4,5,4,4,1,4,2,5,1,1,1,1,2,3], "nickelodeon");
-const ADULTSWIM        = new Tagset("Adult Swim",         [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1], "adult swim");
+const ADULTSWIM        = new Tagset("Adult Swim",         [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1], "adult-swim");
 const WEIRD            = new Tagset("Weird",              [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1], "weird");
 const FRIENDSHIP       = new Tagset("Friendship",         [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3], "friendship");
 const APOCALYPSE       = new Tagset("Apocalypse",         [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4], "apocalypse");
-const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4], "dark comedy");
+const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4], "dark-comedy");
 const MAGIC            = new Tagset("Magic",              [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4], "magic");
 const SURREALISM       = new Tagset("Surrealism",         [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2], "surrealism");
 
 const TAGSET_ARRAY = [MONSTER, SATIRE, ADULT, CARTOONNETWORK, NICK, ADULTSWIM, WEIRD, FRIENDSHIP, APOCALYPSE, DARKCOMEDY, MAGIC, SURREALISM];
 
 // Show the quiz if its hidden, hide it if its shown
-function toggleQuizVisibility() {
-  $("#quiz").toggle();
+function toggleQuizVisibility(hideOnly=false) {
+  if(hideOnly) {
+    if($("#quiz").is(":visible")) {
+      $("#quiz").toggle();
+    }
+  } else $("#quiz").toggle();
   return;
 }
 
@@ -56,18 +59,10 @@ function resetQuiz() {
   $(".none").prop('checked',true);
 }
 
-//whether results are shown or hidden, hide them.
 function hideResults() {
-  CARTOON_ARRAY.forEach(function (e,i,r) {
-    e.toggleElement(true);
-  });
+  $("#output").empty();
 }
 
-function showAllResults() {
-  CARTOON_ARRAY.forEach(function (e,i,r) {
-    e.toggleElement();
-  });
-}
 
 // submit button clicked function
 $("#sum").click(function() {
@@ -88,13 +83,13 @@ $("#sum").click(function() {
   let similarityArray = []; // Not completely neccecary but makes the next part a little cleaner.
   // * goes through every element in CARTOON_ARRAY and runs each's respective similarity function
   //   and stores the result in similarityArray
-  CARTOON_ARRAY.forEach(function (e, i, r) {
-    similarityArray[i] = (CARTOON_ARRAY[i].similarity(inputAnswers));
+  TAGSET_ARRAY.forEach(function (e, i, r) {
+    similarityArray[i] = (TAGSET_ARRAY[i].similarity(inputAnswers));
   });
   console.log("similarity:");
   console.log(similarityArray);
-  callConfetti();
-  // * Math.max() gets the largest number in the array, it's set as max
+  //callConfetti();
+  // - Math.max() gets the largest number in the array, it's set as max
   //   which is passed as the parameter in indexOf() which allows it to find
   //   the position of the largest number in the array, which is set as index.
   //   the index should also be the index of the corresponding cartoon in CARTOON_ARRAY
@@ -102,11 +97,19 @@ $("#sum").click(function() {
   let max = Math.max(...similarityArray);
   let index = similarityArray.indexOf(max);
   console.log(index);
-  console.log(CARTOON_ARRAY[index].name);
-  toggleQuizVisibility();
-  CARTOON_ARRAY[index].toggleElement();
-  $("#restart").toggle();
-  $("#header").toggle();
+  console.log(TAGSET_ARRAY[index].name);
+  var tagSet = TAGSET_ARRAY[index].tagName;
+  var imdbUrl = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?num_votes=5000,&title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
+
+  $("#loading").toggle();
+
+  getAjax(imdbUrl);
+
+  toggleQuizVisibility(true);
+
+  if($("#header").is(":visible")) {
+    $("#header").toggle();
+  }
   window.scrollTo(0,0);
   jQuery(window).trigger('resize').trigger('scroll');
 });
@@ -115,6 +118,12 @@ $("#sum").click(function() {
 $("#restart").click(function () {
   if($("#restart").is(":visible")) {
     $("#restart").toggle();
+  }
+  if($("#loading").is(":visible")) {
+    $("#loading").toggle();
+  }
+  if($("#retry").is(":visible")) {
+    $("#retry").toggle();
   }
   resetQuiz();
   hideResults();
@@ -145,9 +154,9 @@ function obnoxiousFlash () {
 
 
 
-var tag1 = "monster";
-var tag2 = "scientist";
-var tagSet = "monster";
+//var tag1 = "monster";
+//var tag2 = "scientist";
+//var tagSet = "monster";
 
 
 function uniqueRandom (amount, range) {
@@ -167,11 +176,11 @@ function arrayOfSelf (length) {
   return arr;
 }
 
-var url = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
+//var url = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
 //url = "none";
 //var domain = "https://cataas.com";
 
-function getAjax () {
+function getAjax (url) {
 	// Using the core $.ajax() method
   $.ajax({
       // The URL for the request
@@ -188,19 +197,38 @@ function getAjax () {
       //alert("Success!");
       console.log(data);
 
-      //var cartoonsToGet = uniqueRandom(5, data.results.length);
-      var cartoonsToGet = arrayOfSelf(10);
+      var cartoonsToGet = uniqueRandom(10, data.results.length);
+      //var cartoonsToGet = arrayOfSelf(10);
 
       cartoonsToGet.forEach(function (el, index) {
         //data[element].
         console.log(data.results[el]);
         console.log(el);
+        /*
         $("#output").append("<h1>" + data.results[el].title + "</h1>");
         $("#output").append("<p>" + data.results[el].description + "       " + data.results[el].contentRating + "</p>");
         $("#output").append("<h4>" + data.results[el].plot + "</h4>");
         $("#output").append("<img scr=" + data.results[el].image + ">");
-        $("#output").append(`<img scr=${data.results[el].image}>`);
+        */
+        //$("#output").append(`<img scr=${data.results[el].image}>`);
+
+        $("#output").append(`<div>
+                              <h1>${data.results[el].title}</h1>
+                              <p>${data.results[el].description}       ${data.results[el].contentRating}</p>
+                              <img src=${data.results[el].image}>
+                              <h4>${data.results[el].plot}</h4>
+                            `);
       });
+      callConfetti();
+      if($("#restart").not(":visible")) {
+        $("#restart").toggle();
+      }
+      if($("#loading").is(":visible")) {
+        $("#loading").toggle();
+      }
+      if($("#retry").is(":visible")) {
+        $("#retry").toggle();
+      }
       /*
       $("#output").append("<h1>" + data.title + "</h1>");
       $("#output").append("<img scr=" + data.img + "></img>");
@@ -210,8 +238,13 @@ function getAjax () {
   // If the request fails
   .fail(function( xhr, status, errorThrown ) {
       console.log(errorThrown + " Status:" + status );
+      $("#retry").toggle();
   });
 }
+
+$("#retry-button").click(function () {
+  $('#sum').trigger('click');
+});
 
 $("#press-me").click(getAjax);
 
