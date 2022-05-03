@@ -99,7 +99,7 @@ $("#sum").click(function() {
   console.log(index);
   console.log(TAGSET_ARRAY[index].name);
   var tagSet = TAGSET_ARRAY[index].tagName;
-  var imdbUrl = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?num_votes=5000,&title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
+  var imdbUrl = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?num_votes=1000,&title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
 
   $("#loading").toggle();
 
