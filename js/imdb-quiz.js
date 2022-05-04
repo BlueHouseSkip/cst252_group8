@@ -2,6 +2,8 @@
 
 const WEIGHT = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
+//S$(".none").checkboxradio('disable');
+
 // CURRENTLY 21 QUESTIONS
 
 // cosntructor for each cartoon definition.
@@ -130,8 +132,8 @@ $("#restart").click(function () {
   toggleQuizVisibility();
 
   $("#header").toggle();
-  $('input').prop('checked',false).checkboxradio('refresh') // refreshes JQueryUI to reflect accurate state of the quiz
-  //$(".none").prop('checked',true);
+  $('input').prop('checked',false).checkboxradio('refresh');  // refreshes JQueryUI to reflect accurate state of the quiz
+  $(".none").prop('checked',true).checkboxradio('refresh');
   window.scrollTo(0,0);
   jQuery(window).trigger('resize').trigger('scroll');
 });
@@ -197,8 +199,8 @@ function getAjax (url) {
       //alert("Success!");
       console.log(data);
 
-      var cartoonsToGet = uniqueRandom(10, data.results.length);
-      //var cartoonsToGet = arrayOfSelf(10);
+      //var cartoonsToGet = uniqueRandom(10, data.results.length);
+      var cartoonsToGet = arrayOfSelf(data.results.length);
 
       cartoonsToGet.forEach(function (el, index) {
         //data[element].
