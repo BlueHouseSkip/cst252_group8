@@ -74,6 +74,7 @@ $("#sum").click(function() {
     alert("Please answer every question");
     return;
   }
+  $("#sum").toggle();
   let inputAnswers = []; // Declares for use later
   // * grabs every element on the page with the attribute 'checked'
   //   If a non-quiz answer element is somehow marked as 'checked' this will likely break the quiz.
@@ -118,6 +119,7 @@ $("#sum").click(function() {
 
 // restart button that appears with the results. resets everything allowing you to retake the quiz.
 $("#restart").click(function () {
+  window.scrollTo(0,0);
   if($("#restart").is(":visible")) {
     $("#restart").toggle();
   }
@@ -132,10 +134,13 @@ $("#restart").click(function () {
   toggleQuizVisibility();
 
   $("#header").toggle();
-  $('input').prop('checked',false).checkboxradio('refresh');  // refreshes JQueryUI to reflect accurate state of the quiz
-  $(".none").prop('checked',true).checkboxradio('refresh');
+  $("#sum").toggle();
+  //$('#input').prop('checked',false);  // refreshes JQueryUI to reflect accurate state of the quiz
+  $(".none").prop('checked',true)
+  $('input').checkboxradio("refresh");
   window.scrollTo(0,0);
   jQuery(window).trigger('resize').trigger('scroll');
+  window.scrollTo(0,0);
 });
 
 //$('.parallax-window').parallax({imageSrc: '/path/to/image.jpg'})
@@ -199,8 +204,8 @@ function getAjax (url) {
       //alert("Success!");
       console.log(data);
 
-      //var cartoonsToGet = uniqueRandom(10, data.results.length);
-      var cartoonsToGet = arrayOfSelf(data.results.length);
+      var cartoonsToGet = uniqueRandom(10, data.results.length);
+      //var cartoonsToGet = arrayOfSelf(data.results.length);
 
       cartoonsToGet.forEach(function (el, index) {
         //data[element].
