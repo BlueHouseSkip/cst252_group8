@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/site.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/quiz.js" defer></script>
+  <script src="js/misc.js" defer></script>
   <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
   <!--<script src="js/testing.js" defer></script>-->
   <script src="jqueryUI/jquery-ui.min.js" defer></script>
@@ -41,6 +42,52 @@
 </head>
 <body style="margin: 0;">
 <div class="parallax-window" data-parallax="scroll" data-image-src="img/jazz4.png" class="fullDiv" style="margin: 0;">
+
+<!-- <navbar> old navbar (drowpdown broken)
+<ul>
+  <li><a href="---">Old Quiz</a></li>
+  <li><a href="---">New Quiz</a></li>
+  <li class="dropdown" style="float:right">
+    <a href="javascript:void(0)" class="dropbtn">Our Websites</a>
+      <div class="dropdown-content">
+        <a href="#">John</a>
+        <a href="https://momiji-matcha.github.io/cst252/">Sugi</a>
+        <a href="https://andrescardenas3.github.io/cst252/">Andreas</a>
+        <a href="#">Omar</a>
+      </div>
+</ul>
+</navbar> -->
+
+<!-- new navbar from Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="javascript:void(0)">Want more Quizes?</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">New Quiz <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Old Quiz</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          Our Websites
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">John</a>
+          <a class="dropdown-item" href="https://momiji-matcha.github.io/cst252/">Sugi</a>
+          <a class="dropdown-item" href="https://andrescardenas3.github.io/cst252/">Andreas</a>
+          <a class="dropdown-item" href="#">Omar</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- end navbar -->
+
   <div id="header">
    <h1>Cartoon Quiz!!1!!!!</h1>
     <p id="description">Are you <b>bored</b> and looking for something to watch? Do you like <b>cartoons</b>? Do you like answering questions? Well do we
@@ -616,6 +663,7 @@
    <p class="foot">Project created for CST 252 at Cal State Monterey Bay</br>
      Created by John Brandes, Sugi Sugihara, Andres Cardenas, and Omar Lopez</p>
 
+  <button id="scroll_button"> BACK TO TOP </button>
   </div>
 
 </footer>
