@@ -5,6 +5,7 @@
  <link rel="stylesheet" type="text/css" href="css/site.css">
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
  <script src="js/imdb-quiz.js" defer></script>
+ <script src="js/lengthchoose.js" defer></script>
  <!--<script src="js/imdb.js" defer></script>-->
  <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
  <!--<script src="js/testing.js" defer></script>-->
@@ -28,206 +29,417 @@
    <p id="description">Are you <b>bored</b> and looking for something to watch? Do you like <b>cartoons</b>? Do you like answering questions? Well do we
      have the quiz for you! Answer the questions below to find the <b>cartoon of your dreams!</b> <br> Or not XD </p>
  </div>
-
-
-   <div id="quiz" class="widget">
-     <form>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_1.png">
-        <p class="question-text">What decade were you born in?</p>
-         <label style="display: none;"><input type="radio" name="1" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="1" value="5">Earlier</label><br>
-         <label><input type="radio" name="1" value="1">the 1980s</label><br>
-         <label><input type="radio" name="1" value="2">the 1990s</label><br>
-         <label><input type="radio" name="1" value="3">the 2000s</label><br>
-         <label><input type="radio" name="1" value="4">the 2010s</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_2.png">
-        <p class="question-text">How organized are you?</p>
-         <label style="display: none;"><input type="radio" name="2" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="2" value="1">Messy</label>
-         <label><input type="radio" name="2" value="2">A little clutter</label><br>
-         <label><input type="radio" name="2" value="3">Clean freak</label>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_3.png">
-        <p class="question-text">How well do you get along with other people?</p>
-         <label style="display: none;"><input type="radio" name="3" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="3" value="1">Very closed off</label><br>
-         <label><input type="radio" name="3" value="2">Introverted</label><br>
-         <label><input type="radio" name="3" value="3">Social</label><br>
-         <label><input type="radio" name="3" value="4">Extrovert</label><br>
-         <label><input type="radio" name="3" value="5">People person</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_4.png">
-        <p class="question-text">What's your favorite genre?</p>
-         <label style="display: none;"><input type="radio" name="4" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="4" value="1">Sci-fi</label>
-         <label><input type="radio" name="4" value="2">Fantasy</label><br>
-         <label><input type="radio" name="4" value="3">Reality</label>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_5.png">
-        <p class="question-text">What's your favorite channel?</p>
-         <label style="display: none;"><input type="radio" name="5" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="5" value="1">Disney</label>
-         <label><input type="radio" name="5" value="2">Cartoon Network</label><br>
-         <label><input type="radio" name="5" value="3">Nickeloden</label>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_6.png">
-        <p class="question-text">Do you prefer the city life or country life?</p>
-         <label style="display: none;"><input type="radio" name="6" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="6" value="1">City</label>
-         <label><input type="radio" name="6" value="2">Country</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_7.png">
-        <p class="question-text">What's your favorite color?</p>
-         <label style="display: none;"><input type="radio" name="7" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="7" value="1">Red</label>
-         <label><input type="radio" name="7" value="2">Blue</label><br>
-         <label><input type="radio" name="7" value="3">Yellow</label>
-         <label><input type="radio" name="7" value="4">Green</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_8.png">
-        <p class="question-text">How important is family to you?</p>
-         <label style="display: none;"><input type="radio" name="8" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="8" value="1">What family?</label>
-         <label><input type="radio" name="8" value="2">There just kinda there</label><br>
-         <label><input type="radio" name="8" value="3">Just about average</label>
-         <label><input type="radio" name="8" value="4">OHANA MEANS FAMILY</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_9.png">
-        <p class="question-text">You are playing a video game, it is most likely:</p>
-         <label style="display: none;"><input type="radio" name="9" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="9" value="1">A first-person shooter</label>
-         <label><input type="radio" name="9" value="2">A game with a maze or a race track</label><br>
-         <label><input type="radio" name="9" value="3">You don't care much for video games</label>
-         <label><input type="radio" name="9" value="4">A computer version of a board game</label><br>
-         <label><input type="radio" name="9" value="5">A free-form adventure, something like Myst</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_10.png">
-        <p class="question-text">If money was not a factor, you would choose to drive:</p>
-         <label style="display: none;"><input type="radio" name="10" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="10" value="1">A street hotrod</label>
-         <label><input type="radio" name="10" value="2">A classic sports car</label><br>
-         <label><input type="radio" name="10" value="3">A car is a car, you don't care</label>
-         <label><input type="radio" name="10" value="4">A minivan or station wagon</label><br>
-         <label><input type="radio" name="10" value="5">An SUV</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_11.png">
-        <p class="question-text">When you were 10 years old you would choose to:</p>
-         <label style="display: none;"><input type="radio" name="11" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="11" value="1">Be outside and play sports with your friends</label>
-         <label><input type="radio" name="11" value="2">Ride bikes with your friends</label><br>
-         <label><input type="radio" name="11" value="3">Go swimming or play with toys</label>
-         <label><input type="radio" name="11" value="4">Go for a walk in the woods with your friends or play with your pet</label><br>
-         <label><input type="radio" name="11" value="5">Play pretend or play indoor games</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_12.png">
-        <p class="question-text">Which best describes you?</p>
-         <label style="display: none;"><input type="radio" name="12" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="12" value="1">You love "Star Trek" and consider yourself a "Trekkie" </label>
-         <label><input type="radio" name="12" value="2">You enjoy "Star Trek" but it's just a cool TV show</label><br>
-         <label><input type="radio" name="12" value="3">Never watched "Star Trek" in your life</label>
-         <label><input type="radio" name="12" value="4">You've seen "Star Trek" and didn't care for it</label><br>
-         <label><input type="radio" name="12" value="5">You HATE "Star Trek" and everything it stands for</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_13.png">
-        <p class="question-text">What kind of student are you:</p>
-         <label style="display: none;"><input type="radio" name="13" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="13" value="1">Failure</label>
-         <label><input type="radio" name="13" value="2">Just trying to pass</label><br>
-         <label><input type="radio" name="13" value="3">B everyday baby!!!</label>
-         <label><input type="radio" name="13" value="4">Straight As</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_14.png">
-        <p class="question-text">Choice of melee weapon:</p>
-         <label style="display: none;"><input type="radio" name="14" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="14" value="1">Sword</label>
-         <label><input type="radio" name="14" value="2">Shield</label><br>
-         <label><input type="radio" name="14" value="3">Bow and Arrow</label>
-         <label><input type="radio" name="14" value="4">Staff</label><br>
-         <label><input type="radio" name="14" value="5">Bare Hands</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_15.png">
-        <p class="question-text">Choice of superpower:</p>
-         <label style="display: none;"><input type="radio" name="15" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="15" value="1">Strength</label>
-         <label><input type="radio" name="15" value="2">Speed</label><br>
-         <label><input type="radio" name="15" value="3">Intelligence</label>
-         <label><input type="radio" name="15" value="4">Telepathy</label><br>
-         <label><input type="radio" name="15" value="5">Shape Shifter</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_16.png">
-        <p class="question-text">Type of person in a team:</p>
-         <label style="display: none;"><input type="radio" name="16" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="16" value="1">Team leader</label>
-         <label><input type="radio" name="16" value="2">Follower</label><br>
-         <label><input type="radio" name="16" value="3">Lone wolf</label>
-         <label><input type="radio" name="16" value="4">Carry the team</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_17.png">
-        <p class="question-text">Type of player:</p>
-         <label style="display: none;"><input type="radio" name="17" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="17" value="1">Healer</label>
-         <label><input type="radio" name="17" value="2">Tank</label><br>
-         <label><input type="radio" name="17" value="3">DPS</label>
-         <label><input type="radio" name="17" value="4">Defense</label><br>
-         <label><input type="radio" name="17" value="5">I don’t know what those mean</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_18.png">
-        <p class="question-text">Favorite Weather:</p>
-         <label style="display: none;"><input type="radio" name="18" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="18" value="1">Sunny</label>
-         <label><input type="radio" name="18" value="2">Cold</label><br>
-         <label><input type="radio" name="18" value="3">Rainy</label>
-         <label><input type="radio" name="18" value="4">Snow</label><br>
-         <label><input type="radio" name="18" value="5">Warm</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_19.png">
-        <p class="question-text">Tea or Coffee:</p>
-         <label style="display: none;"><input type="radio" name="19" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="19" value="1">Tea</label>
-         <label><input type="radio" name="19" value="2">Coffee</label><br>
-       </div>
-       <div class="question" id="q2">
-        <img id=titles src="img/question_20.png">
-        <p class="question-text">Which bender are you:</p>
-         <label style="display: none;"><input type="radio" name="20" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="20" value="1">Water</label>
-         <label><input type="radio" name="20" value="2">Earth</label><br>
-         <label><input type="radio" name="20" value="3">Fire</label>
-         <label><input type="radio" name="20" value="4">Air</label><br>
-       </div>
-       <div class="question" id="q1">
-        <img id=titles src="img/question_21.png">
-        <p class="question-text">How do you deal with sadness or depression:</p>
-         <label style="display: none;"><input type="radio" name="21" value="0" checked="true" class="none">none</label>
-         <label><input type="radio" name="21" value="1">Isolating</label>
-         <label><input type="radio" name="21" value="2">Seeking others for help</label><br>
-         <label><input type="radio" name="21" value="3">Channeling through hobby</label>
-         <label><input type="radio" name="21" value="4">Travel</label><br>
-         <label><input type="radio" name="21" value="5">Eating</label><br>
-       </div>
-     </form>
-     <br>
-     <button id="sum">SUBMIT</button><br><br>
+ <div id="length">
+   <p>how long do you have?</p>
+   <button id="10q">10 questions</button>
+   <button id="20q">20 questions</button>
+   <button id="30q">30 questions</button>
+   <button id="40q">40 questions</button>
+ </div>
+ <div id="quiz" class="widget">
+   <form>
+     <div id="first10">
+     <div class="question" id="q1">
+      <img id=titles src="img/question_1.png">
+      <p class="question-text">What decade were you born in?</p>
+      <label style="display: none;"><input type="radio" name="1" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="1" value="1">Earlier</label><br>
+       <label><input type="radio" name="1" value="2">the 1980s</label><br>
+       <label><input type="radio" name="1" value="3">the 1990s</label><br>
+       <label><input type="radio" name="1" value="4">the 2000s</label><br>
+       <label><input type="radio" name="1" value="5">the 2010s</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_2.png">
+      <p class="question-text">How organized are you?</p>
+      <label style="display: none;"><input type="radio" name="2" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="2" value="1">I live in a pigsty.</label>
+       <label><input type="radio" name="2" value="2">I'm kinda messy.</label>
+       <label><input type="radio" name="2" value="3">A little clutter is fine.</label><br>
+       <label><input type="radio" name="2" value="4">I'm a total clean freak</label>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_3.png">
+      <p class="question-text">How well do you get along with other people?</p>
+      <label style="display: none;"><input type="radio" name="3" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="3" value="1">I hate people!!!</label><br>
+       <label><input type="radio" name="3" value="2">I'm Introverted</label><br>
+       <label><input type="radio" name="3" value="3">Fine.</label><br>
+       <label><input type="radio" name="3" value="4">I'm Extroverted</label><br>
+       <label><input type="radio" name="3" value="5">I need to be surrounded by people all the time.</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_4.png">
+      <p class="question-text">What's your favorite genre?</p>
+      <label style="display: none;"><input type="radio" name="4" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="4" value="1">Sci-fi</label>
+       <label><input type="radio" name="4" value="2">Fantasy</label><br>
+       <label><input type="radio" name="4" value="3">Romance</label>
+       <label><input type="radio" name="4" value="4">Comedy</label>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_5.png">
+      <p class="question-text">You're watching TV. What's on the screen?</p>
+      <label style="display: none;"><input type="radio" name="5" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="5" value="1">The news</label>
+       <label><input type="radio" name="5" value="2">Sports</label><br>
+       <label><input type="radio" name="5" value="3">Reality Television</label>
+       <label><input type="radio" name="5" value="3">Cartoons</label>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_6.png">
+      <p class="question-text">Do you prefer the city life or country life?</p>
+      <label style="display: none;"><input type="radio" name="6" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="6" value="1">City</label>
+       <label><input type="radio" name="6" value="2">Country</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_7.png">
+      <p class="question-text">What's your favorite color?</p>
+      <label style="display: none;"><input type="radio" name="7" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="7" value="1">Red</label>
+       <label><input type="radio" name="7" value="2">Blue</label><br>
+       <label><input type="radio" name="7" value="3">Yellow</label>
+       <label><input type="radio" name="7" value="4">Green</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_8.png">
+      <p class="question-text">How important is family to you?</p>
+      <label style="display: none;"><input type="radio" name="8" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="8" value="1">What family?</label>
+       <label><input type="radio" name="8" value="2">Eh, there's ok.</label><br>
+       <label><input type="radio" name="8" value="3">What can I say, they're my family.</label>
+       <label><input type="radio" name="8" value="4">OHANA MEANS FAMILY</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_9.png">
+      <p class="question-text">You are playing a video game, it is most likely:</p>
+      <label style="display: none;"><input type="radio" name="9" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="9" value="1">A first-person shooter</label>
+       <label><input type="radio" name="9" value="2">A game with a maze or a race track</label><br>
+       <label><input type="radio" name="9" value="3">A free-form adventure, something like Myst</label>
+       <label><input type="radio" name="9" value="4">A computer version of a board game</label><br>
+       <label><input type="radio" name="9" value="5">You don't care much for video games</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_10.png">
+      <p class="question-text">If money was not a factor, you would choose to drive:</p>
+      <label style="display: none;"><input type="radio" name="10" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="10" value="1">A hybrid</label>
+       <label><input type="radio" name="10" value="2">A classic sports car</label><br>
+       <label><input type="radio" name="10" value="3">A car is a car, you don't care</label>
+       <label><input type="radio" name="10" value="4">A minivan or station wagon</label><br>
+       <label><input type="radio" name="10" value="5">An SUV</label><br>
+     </div>
+     </div>
+     <div id="second10">
+     <div class="question" id="q1">
+      <img id=titles src="img/question_11.png">
+      <p class="question-text">When you were 10 years old you would choose to:</p>
+      <label style="display: none;"><input type="radio" name="11" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="11" value="1">Be outside and play sports with your friends</label>
+       <label><input type="radio" name="11" value="2">Ride bikes with your friends</label><br>
+       <label><input type="radio" name="11" value="3">Go swimming or play with toys</label>
+       <label><input type="radio" name="11" value="4">Go for a walk in the woods with your friends or play with your pet</label><br>
+       <label><input type="radio" name="11" value="5">Play pretend or play indoor games</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_12.png">
+      <p class="question-text">Which best describes you?</p>
+      <label style="display: none;"><input type="radio" name="12" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="12" value="1">You love "Star Trek" and consider yourself a "Trekkie" </label>
+       <label><input type="radio" name="12" value="2">You enjoy "Star Trek" but it's just a cool TV show</label><br>
+       <label><input type="radio" name="12" value="3">Never watched "Star Trek" in your life</label>
+       <label><input type="radio" name="12" value="4">You've seen "Star Trek" and didn't care for it</label><br>
+       <label><input type="radio" name="12" value="5">You HATE "Star Trek" and everything it stands for</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_13.png">
+      <p class="question-text">What kind of student are you:</p>
+      <label style="display: none;"><input type="radio" name="13" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="13" value="1">Don't ask me about my grades.</label>
+       <label><input type="radio" name="13" value="2">C's get degrees</label><br>
+       <label><input type="radio" name="13" value="3">B everyday baby!!!</label>
+       <label><input type="radio" name="13" value="4">STRAIGHT As</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_14.png">
+      <p class="question-text">Choice of melee weapon:</p>
+      <label style="display: none;"><input type="radio" name="14" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="14" value="1">Flaming Sword</label>
+       <label><input type="radio" name="14" value="2">Viking Shield</label><br>
+       <label><input type="radio" name="14" value="3">Recurve Bow and Arrow</label>
+       <label><input type="radio" name="14" value="4">Magical Staff</label><br>
+       <label><input type="radio" name="14" value="5">My Bare Hands</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_15.png">
+      <p class="question-text">Choice of superpower:</p>
+      <label style="display: none;"><input type="radio" name="15" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="15" value="1">Strength</label>
+       <label><input type="radio" name="15" value="2">Speed</label><br>
+       <label><input type="radio" name="15" value="3">Intelligence</label>
+       <label><input type="radio" name="15" value="4">Telepathy</label><br>
+       <label><input type="radio" name="15" value="5">Shape Shifter</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_16.png">
+      <p class="question-text">Type of person in a team:</p>
+      <label style="display: none;"><input type="radio" name="16" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="16" value="1">Team leader</label>
+       <label><input type="radio" name="16" value="2">Follower</label><br>
+       <label><input type="radio" name="16" value="3">Don't show up</label>
+       <label><input type="radio" name="16" value="4">Carries the team</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_17.png">
+      <p class="question-text">Type of player:</p>
+      <label style="display: none;"><input type="radio" name="17" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="17" value="1">Healer</label>
+       <label><input type="radio" name="17" value="2">Tank</label><br>
+       <label><input type="radio" name="17" value="3">DPS</label>
+       <label><input type="radio" name="17" value="4">Defense</label><br>
+       <label><input type="radio" name="17" value="5">I don’t know what those mean</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_18.png">
+      <p class="question-text">Favorite Weather:</p>
+      <label style="display: none;"><input type="radio" name="18" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="18" value="1">Hot summer day</label>
+       <label><input type="radio" name="18" value="2">Cool and overcast</label><br>
+       <label><input type="radio" name="18" value="3">Thunderstorm</label>
+       <label><input type="radio" name="18" value="4">Snow!!!</label><br>
+       <label><input type="radio" name="18" value="5">Hail.</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_19.png">
+      <p class="question-text">Tea or Coffee:</p>
+      <label style="display: none;"><input type="radio" name="19" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="19" value="1">Tea</label>
+       <label><input type="radio" name="19" value="2">Coffee</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_20.png">
+      <p class="question-text">Which bender are you:</p>
+      <label style="display: none;"><input type="radio" name="20" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="20" value="1">Water</label>
+       <label><input type="radio" name="20" value="2">Earth</label><br>
+       <label><input type="radio" name="20" value="3">Fire</label>
+       <label><input type="radio" name="20" value="4">Air</label><br>
+     </div>
+     </div>
+     <div id="third10">
+     <div class="question" id="q1">
+      <img id=titles src="img/question_21.png">
+      <p class="question-text">How do you deal with sadness or depression:</p>
+      <label style="display: none;"><input type="radio" name="21" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="21" value="1">Isolating</label>
+       <label><input type="radio" name="21" value="2">Seeking others for help</label><br>
+       <label><input type="radio" name="21" value="3">Channeling through hobby</label>
+       <label><input type="radio" name="21" value="4">Travel</label><br>
+       <label><input type="radio" name="21" value="5">Eating</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_22.png">
+      <p class="question-text">When you sleep, you primarily</p>
+      <label style="display: none;"><input type="radio" name="22" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="22" value="1">Sleep on your stomach</label>
+       <label><input type="radio" name="22" value="2">Sleep on your stomach or side</label><br>
+       <label><input type="radio" name="22" value="3">Toss and turn a lot</label>
+       <label><input type="radio" name="22" value="4">Sleep on your back or side</label><br>
+       <label><input type="radio" name="22" value="5">Sleep on your back</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_23.png">
+      <p class="question-text">You are:</p>
+      <label style="display: none;"><input type="radio" name="23" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="23" value="1">About 6 feet tall or more</label>
+       <label><input type="radio" name="23" value="2">Just under 6 feet tall</label><br>
+       <label><input type="radio" name="23" value="3">About 5 and a half feet tall</label>
+       <label><input type="radio" name="23" value="4">Less than 5 and half feet tall</label><br>
+       <label><input type="radio" name="23" value="5">Less than 5 feet tall</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_24.png">
+      <p class="question-text">You like to wear your hair:</p>
+      <label style="display: none;"><input type="radio" name="24" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="24" value="1">Very short, like a buzz cut or a shaved head</label>
+       <label><input type="radio" name="24" value="2">Short, because it's easy to manage</label><br>
+       <label><input type="radio" name="24" value="3">About medium length - not buzzed but not long either</label>
+       <label><input type="radio" name="24" value="4">A bit long, maybe to your shoulders, because you look better that way</label><br>
+       <label><input type="radio" name="24" value="5">Long, as in below your shoulders.</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_25.png">
+      <p class="question-text">You feel that Martial Arts like Karate:</p>
+      <label style="display: none;"><input type="radio" name="25" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="25" value="1">Are WAY COOL.</label>
+       <label><input type="radio" name="25" value="2">Are great excercise to keep physically fit</label><br>
+       <label><input type="radio" name="25" value="3">Keep mind and body focused</label>
+       <label><input type="radio" name="25" value="4">Are more about the spiritual discipline than physical</label><br>
+       <label><input type="radio" name="25" value="5">Give a person the confidence that they can handle themselves.</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_26.png">
+      <p class="question-text">You are mostly:</p>
+      <label style="display: none;"><input type="radio" name="26" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="26" value="1">Assertive</label>
+       <label><input type="radio" name="26" value="2">Independent</label><br>
+       <label><input type="radio" name="26" value="3">Adaptable</label>
+       <label><input type="radio" name="26" value="4">Understanding</label><br>
+       <label><input type="radio" name="26" value="5">Compassionate</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_27.png">
+      <p class="question-text">You find working on cars in the garage to be:</p>
+      <label style="display: none;"><input type="radio" name="27" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="27" value="1">Fun. I love working with my hands!</label>
+       <label><input type="radio" name="27" value="2">You don't like it, but your expected to give it the old college try.</label><br>
+       <label><input type="radio" name="27" value="3">Well, car maintenance needs to be done or you'll be walking a lot.</label>
+       <label><input type="radio" name="27" value="4">You find it empowering - the power of the engine, the tools, it's great!</label><br>
+       <label><input type="radio" name="27" value="5">You don't even know what is under the hood of a car.</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_28.png">
+      <p class="question-text">One train leaves New York traveling South at 45 miles per hour. Another train leaves Baltimore traveling
+        North at 80 miles per hour. At what time will the trains pass one another? Describe how you find this math problem:</p>
+        <label style="display: none;"><input type="radio" name="28" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="28" value="1">EASY! Those kind of problems are simple to solve.</label>
+       <label><input type="radio" name="28" value="2">Not too difficult, especially because you can work it out so easily.</label><br>
+       <label><input type="radio" name="28" value="3"> Word problems are silly, but they aren't that hard.</label>
+       <label><input type="radio" name="28" value="4">Wait, what do they want to know? Word problems always confuse you.</label><br>
+       <label><input type="radio" name="28" value="5">You HATE word problems, you've no idea what this is asking you.</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_29.png">
+      <p class="question-text">You meet someone who is actually attracted to you, but are trying to hide it.</p>
+      <label style="display: none;"><input type="radio" name="29" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="29" value="1">You're clueless!</label>
+       <label><input type="radio" name="29" value="2">You might figure it out later on when you think about it.</label><br>
+       <label><input type="radio" name="29" value="3">You might pick up on it at the time, with some clues.</label>
+       <label><input type="radio" name="29" value="4">You'd probably figure it out.</label><br>
+       <label><input type="radio" name="29" value="5"> You would know right away.</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_30.png">
+      <p class="question-text">You are parking a car. You have to back into the space:</p>
+      <label style="display: none;"><input type="radio" name="30" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="30" value="1">No problem!</label>
+       <label><input type="radio" name="30" value="2">You'd rather pull in foreward, but you can manage backing in if you have to.</label><br>
+       <label><input type="radio" name="30" value="3">It's a bit tricky - you might even look for an easier space.</label>
+       <label><input type="radio" name="30" value="4">You'd only park there if there weren't any other spaces open.</label><br>
+       <label><input type="radio" name="30" value="5">You'd find another lot or ramp in which to park - FORGET THIS!</label><br>
+     </div>
+     </div>
+     <div id="fourth10">
+     <div class="question" id="q1">
+      <img id=titles src="img/question_31.png">
+      <p class="question-text">Visualize the following in your head. Don't draw or write anything down. Picture a dumbbell. One end is painted blue,
+        the other is painted red. You are on the space shuttle and the dumbbell is floating in the air in front of you, with on end toward you and
+        the other away. It is slowly rotating, with the red end dropping down and the blue end rising until it stands vertically in front of you. From
+        this position it rotates end over end three times, what position is either end in now?</p>
+        <label style="display: none;"><input type="radio" name="31" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="31" value="1">The red end is definitely on top, no question!</label>
+       <label><input type="radio" name="31" value="2">I'm pretty sure that the blue end is on the bottom.</label><br>
+       <label><input type="radio" name="31" value="3">I think the red end is pointing at the floor.</label>
+       <label><input type="radio" name="31" value="4">I'm not sure. Maybe the red end is on the bottom again.</label><br>
+       <label><input type="radio" name="31" value="5">I've no idea!</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_32.png">
+      <p class="question-text">You are introduced to someone and they have a tiny grey thread on their blue suit jacket.</p>
+      <label style="display: none;"><input type="radio" name="32" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="32" value="1">You wouldn't notice it at all.</label>
+       <label><input type="radio" name="32" value="2">You might notice it, if it were long or contrasted with the coat a lot.</label><br>
+       <label><input type="radio" name="32" value="3">You might notice.</label>
+       <label><input type="radio" name="32" value="4">You'd probably notice it - and maybe even mention it later.</label><br>
+       <label><input type="radio" name="32" value="5">You would notice it right away.</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_33.png">
+      <p class="question-text">You have to describe a complex shape to someone else over the phone:</p>
+      <label style="display: none;"><input type="radio" name="33" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="33" value="1">You can picture it in your head, but can't find the right words.</label>
+       <label><input type="radio" name="33" value="2">You can picture it in your head and describe it well enough.</label><br>
+       <label><input type="radio" name="33" value="3">With enough time you can describe the shape accurately.</label>
+       <label><input type="radio" name="33" value="4">You try lots of descriptions and comparisons, but you're not sure your getting it across right.</label><br>
+       <label><input type="radio" name="33" value="5">You know plenty of words to that might describe it, if only you could picture it in your head!</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_34.png">
+      <p class="question-text">Check your pockets,</p>
+       <label><input type="radio" name="34" value="1">There is stuff in them like keys and money</label>
+       <label style="display: none;"><input type="radio" name="34" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="34" value="2">You keep your keys there, but nothing else.</label><br>
+       <label><input type="radio" name="34" value="3">If you're going somewhere you put things you need in your pockets.</label>
+       <label><input type="radio" name="34" value="4">You generally don't carry stuff in your pockets, maybe keys or some lip balm</label><br>
+       <label><input type="radio" name="34" value="5">You never carry things in your pockets</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_35.png">
+      <p class="question-text">You are in a waiting room at your dentist, it's very crowded and you have to sit on a small couch next to someone:</p>
+      <label style="display: none;"><input type="radio" name="35" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="35" value="1">I hate that! I might stand instead.</label>
+       <label><input type="radio" name="35" value="2">I'd sit next to the person, but I would "bunch up" next to the armrest.</label><br>
+       <label><input type="radio" name="35" value="3">I'd sit there, but I wouldn't be comfortable.</label>
+       <label><input type="radio" name="35" value="4">Well, it's better than standing. I might even talk to them.</label><br>
+       <label><input type="radio" name="35" value="5"> GREAT! There's an open seat - you plop right down next to the other person.</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_36.png">
+      <p class="question-text">You are about to cry during a movie,</p>
+      <label style="display: none;"><input type="radio" name="36" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="36" value="1">NO YOU'RE NOT!</label>
+       <label><input type="radio" name="36" value="2">Not too likely. Rarely happens.</label><br>
+       <label><input type="radio" name="36" value="3"> Because the scene is really a powerful one.</label>
+       <label><input type="radio" name="36" value="4">Because there was "something" that just got to you.</label><br>
+       <label><input type="radio" name="36" value="5">You got so wrapped up in it, it was like it was happening to you or people you knew.</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_37.png">
+      <p class="question-text">If someone else had to pick one of these animals to represent you, it would most likely be the:</p>
+      <label style="display: none;"><input type="radio" name="37" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="37" value="1">Lion</label>
+       <label><input type="radio" name="37" value="2">Bear</label><br>
+       <label><input type="radio" name="37" value="3">Wolf</label>
+       <label><input type="radio" name="37" value="4">Tiger</label><br>
+       <label><input type="radio" name="37" value="5">Fox</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_38.png">
+      <p class="question-text">The last special trip you made to the store was most likely for:</p>
+      <label style="display: none;"><input type="radio" name="38" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="38" value="1">Tools or sports gear</label>
+       <label><input type="radio" name="38" value="2">Hardware or auto parts</label><br>
+       <label><input type="radio" name="38" value="3">Groceries or clothing you needed</label>
+       <label><input type="radio" name="38" value="4">Clothing or home decor you wanted</label><br>
+       <label><input type="radio" name="38" value="5">Clothing accessories or hair care products</label><br>
+     </div>
+     <div class="question" id="q1">
+      <img id=titles src="img/question_39.png">
+      <p class="question-text">How do you feel about vegetarians?</p>
+      <label style="display: none;"><input type="radio" name="39" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="39" value="1">You just don't get it! Meat tastes too good.</label>
+       <label><input type="radio" name="39" value="2">It's not really for you or the people with whom you hang out.</label><br>
+       <label><input type="radio" name="39" value="3">Hey, if someone wants to be a vegetarian that's their business.</label>
+       <label><input type="radio" name="39" value="4">You've either tried it yourself or were thinking of becoming a vegetarian.</label><br>
+       <label><input type="radio" name="39" value="5">You are a vegetarian and you don't believe in eating anything that could think.</label><br>
+     </div>
+     <div class="question" id="q2">
+      <img id=titles src="img/question_40.png">
+      <p class="question-text">Which best describes how you feel about telephones?</p>
+      <label style="display: none;"><input type="radio" name="40" value="0" checked="true" class="none">none</label>
+       <label><input type="radio" name="40" value="1">A great invention for keeping you in touch with business</label>
+       <label><input type="radio" name="40" value="2">You don't go anywhere without one.</label><br>
+       <label><input type="radio" name="40" value="3">If it rings you answer, if you need to call someone you dial. So what?</label>
+       <label><input type="radio" name="40" value="4">Great for gabbing with your friends for hours on end.</label><br>
+       <label><input type="radio" name="40" value="5">You hate telephones, you won't answer one unless you can help it.</label><br>
+     </div>
+     </div>
+    </form>
+  </div>
+    <br>
+    <button id="sum" style="display: none;">SUBMIT</button><br><br>
    </div>
    <div id="loading" style="display: none;">
      <h1>LOADING PLEASE WAIT...</h1>
