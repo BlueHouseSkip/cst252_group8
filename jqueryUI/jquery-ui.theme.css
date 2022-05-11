@@ -113,8 +113,8 @@ a.ui-button:focus {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid #003eff;
-	background: linear-gradient(to right, #db3af0 , #34eaed);
+	border: 1px solid #111;
+	background: linear-gradient(to right, #111 , #1111);
 	font-weight: normal;
 	color: #ffffff;
 }
