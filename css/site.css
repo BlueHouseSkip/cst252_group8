@@ -15,6 +15,65 @@
   font-family: "Comic Sans MS", "Comic Sans", serif;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* (question selector) CSS from getcssscan.com, altered by us */
+.ammount {
+  background-color: rgba(4, 196, 199, .7);
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 20%;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 10px;
+}
+
+.ammount:focus {
+  outline: 0;
+}
+
+.ammount:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.ammount:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .ammount {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* question selector CSS end */
+
 .result h4 {
   padding-left: 10%;
   padding-right: 10%;
@@ -127,6 +186,7 @@ body, html {
 
 body {
   background-color: #b6b6b6;
+  overflow-x: hidden;
 }
 
 
