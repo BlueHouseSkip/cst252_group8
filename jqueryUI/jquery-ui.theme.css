@@ -183,6 +183,7 @@ a.ui-button:active,
 	opacity: .35;
 	-ms-filter: "alpha(opacity=35)"; /* support: IE8 */
 	background-image: none;
+	display: none;
 }
 .ui-state-disabled .ui-icon {
 	-ms-filter: "alpha(opacity=35)"; /* support: IE8 - See #6059 */
