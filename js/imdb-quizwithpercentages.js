@@ -102,6 +102,13 @@ $("#sum").click(function() {
   console.log(index);
   console.log(TAGSET_ARRAY[index].name);
   var tagSet = TAGSET_ARRAY[index].tagName;
+
+  var simPercent = Math.round (similarityArray[index]/40 *100)
+  $("#output").append(`<div>
+                        <h1>${simPercent}%</h1>
+                        <p>Based on your answers we also found that you hsve similar answers to ${TAGSET_ARRAY[index].name}</p>
+                      `);
+
   var imdbUrl = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?num_votes=1000,&title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
 
   $("#loading").toggle();
@@ -259,37 +266,35 @@ $("#clear").click(function () {
 	$("#output").empty()
 })
 
-const PMONSTER = 106;
-const PSATIRE = 118;
-const PADULT = 113;
-const PCARTOONNETWORK = 91;
-const PNICK = 114;
-const PADULTSWIM = 102;
-const PWEIRD = 127;
-const PFRIENDSHIP = 121;
-const PAPOCALYPSE = 106;
-const PDARKCOMEDY = 120;
-const PMAGIC = 112;
-const PSURREALISM = 115;
-
-const PERCENTARRAY [PMONSTER, PSATIRE, PADULT, PCARTOONNETWORK, PNICK, PADULTSWIM, PWEIRD, PFRIENDSHIP,PAPOCALYPSE, PDARKCOMEDY, PMAGIC, PSURREALISM]
-
-let WEIGHTTOTAL = 0;
-for (let i = 0; i < WEIGHT.length; i++) {
-    WEIGHTTOTAL += TAGSET_ARRAY[i];
-}
-
-
-for(let j = 0; j<=PERCENTARRAY.length; j++)
-{
-  if(WEIGHTTOTAL<PERCENTARRAY[j])
-  {
-    console.log(WEIGHTTOTAL/PERCENTARRAY*100);
-    console.log(TAGSET_ARRAY[j]);
-  }
-}
-
-var simPercent = Math.round (similarityArray[index]/40 *100)
+// const PMONSTER = 106;
+// const PSATIRE = 118;
+// const PADULT = 113;
+// const PCARTOONNETWORK = 91;
+// const PNICK = 114;
+// const PADULTSWIM = 102;
+// const PWEIRD = 127;
+// const PFRIENDSHIP = 121;
+// const PAPOCALYPSE = 106;
+// const PDARKCOMEDY = 120;
+// const PMAGIC = 112;
+// const PSURREALISM = 115;
+//
+// const PERCENTARRAY [PMONSTER, PSATIRE, PADULT, PCARTOONNETWORK, PNICK, PADULTSWIM, PWEIRD, PFRIENDSHIP,PAPOCALYPSE, PDARKCOMEDY, PMAGIC, PSURREALISM]
+//
+// let WEIGHTTOTAL = 0;
+// for (let i = 0; i < WEIGHT.length; i++) {
+//     WEIGHTTOTAL += TAGSET_ARRAY[i];
+// }
+//
+//
+// for(let j = 0; j<=PERCENTARRAY.length; j++)
+// {
+//   if(WEIGHTTOTAL<PERCENTARRAY[j])
+//   {
+//     console.log(WEIGHTTOTAL/PERCENTARRAY*100);
+//     console.log(TAGSET_ARRAY[j]);
+//   }
+// }
 
 
 
