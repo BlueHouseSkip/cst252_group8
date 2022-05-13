@@ -30,18 +30,18 @@ function Tagset (name, answersArray, tagName) {
 
         each new cartoon must be declared and then added to the CARTOON_ARRAY variable.
 */
-const MONSTER          = new Tagset("Monster",            [3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "monster");
-const SATIRE           = new Tagset("Satire",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "satire");
-const ADULT            = new Tagset("Adult Animation",    [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "adult-animation");
-const CARTOONNETWORK   = new Tagset("Cartoon Network",    [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "cartoon-network");
-const NICK             = new Tagset("Nickelodeon",        [3,2,4,2,2,2,3,4,5,4,4,1,4,2,5,1,1,1,1,2,3,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "nickelodeon");
-const ADULTSWIM        = new Tagset("Adult Swim",         [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "adult-swim");
-const WEIRD            = new Tagset("Weird",              [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "weird");
-const FRIENDSHIP       = new Tagset("Friendship",         [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "friendship");
-const APOCALYPSE       = new Tagset("Apocalypse",         [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "apocalypse");
-const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "dark-comedy");
-const MAGIC            = new Tagset("Magic",              [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "magic");
-const SURREALISM       = new Tagset("Surrealism",         [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], "surrealism");
+const MONSTER          = new Tagset("Monster",            [1,1,1,2,2,2,1,2,1,3,4,2,2,5,5,3,4,3,1,3,1,1,1,5,1,3,3,4,1,4,5,5,3,3,1,2,3,5,4,3], "monster");
+const SATIRE           = new Tagset("Satire",             [3,2,4,4,3,1,3,3,5,1,2,4,3,4,3,4,5,2,2,3,2,4,1,3,3,2,2,1,4,2,1,5,4,1,4,3,5,4,4,2], "satire");
+const ADULT            = new Tagset("Adult Animation",    [2,3,5,4,1,1,4,3,4,5,1,4,2,1,4,2,3,5,2,2,5,3,5,1,1,1,4,5,2,1,5,1,1,5,2,2,4,1,2,4], "adult-animation");
+const CARTOONNETWORK   = new Tagset("Cartoon Network",    [3,2,3,1,2,1,2,2,1,1,3,2,1,1,1,4,3,1,2,2,3,2,3,2,1,4,4,4,3,4,1,4,4,5,3,1,1,1,1,2], "cartoon-network");
+const NICK             = new Tagset("Nickelodeon",        [2,2,4,4,3,2,4,3,4,2,5,2,3,3,5,2,2,1,1,4,5,1,2,4,4,1,1,4,1,1,2,1,1,2,5,5,2,5,4,4], "nickelodeon");
+const ADULTSWIM        = new Tagset("Adult Swim",         [3,1,1,4,1,2,1,1,1,2,1,5,1,5,1,3,3,3,2,3,1,2,4,1,5,1,4,3,5,5,3,5,5,2,1,1,1,3,1,5], "adult-swim");
+const WEIRD            = new Tagset("Weird",              [4,4,3,2,3,2,3,2,5,3,5,4,2,2,2,4,1,4,1,1,4,5,5,3,4,4,5,3,2,1,4,2,1,5,3,2,4,3,5,5], "weird");
+const FRIENDSHIP       = new Tagset("Friendship",         [4,4,5,3,3,1,2,4,2,4,2,1,4,2,3,1,1,2,1,1,2,4,5,4,4,5,2,2,5,1,2,4,3,4,4,5,3,4,4,4], "friendship");
+const APOCALYPSE       = new Tagset("Apocalypse",         [1,1,2,1,1,2,1,1,3,3,1,3,2,3,1,3,4,5,1,2,4,3,2,2,3,3,4,2,4,5,5,3,4,1,2,3,5,3,2,5], "apocalypse");
+const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,3,4,4,1,1,2,3,1,2,3,4,3,4,4,3,5,2,2,2,3,5,3,2,2,2,3,5,5,5,5,5,5,4,4,1,1,2,2,1], "dark-comedy");
+const MAGIC            = new Tagset("Magic",              [3,2,3,2,1,2,2,3,2,1,4,1,4,4,5,1,1,3,1,4,3,4,5,5,5,4,1,1,1,3,1,1,3,1,5,5,5,4,4,2], "magic");
+const SURREALISM       = new Tagset("Surrealism",         [0,4,4,3,1,1,3,3,5,5,1,4,4,2,2,2,5,1,2,1,3,2,1,3,5,2,3,3,2,5,3,4,2,4,4,4,3,3,4,1], "surrealism");
 
 const TAGSET_ARRAY = [MONSTER, SATIRE, ADULT, CARTOONNETWORK, NICK, ADULTSWIM, WEIRD, FRIENDSHIP, APOCALYPSE, DARKCOMEDY, MAGIC, SURREALISM];
 
@@ -276,7 +276,7 @@ const PERCENTARRAY [PMONSTER, PSATIRE, PADULT, PCARTOONNETWORK, PNICK, PADULTSWI
 
 let WEIGHTTOTAL = 0;
 for (let i = 0; i < WEIGHT.length; i++) {
-    WEIGHTTOTAL += WEIGHT[i];
+    WEIGHTTOTAL += TAGSET_ARRAY[i];
 }
 
 
@@ -288,6 +288,8 @@ for(let j = 0; j<=PERCENTARRAY.length; j++)
     console.log(TAGSET_ARRAY[j]);
   }
 }
+
+var simPercent = Math.round (similarityArray[index]/40 *100)
 
 
 
