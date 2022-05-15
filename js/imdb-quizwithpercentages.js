@@ -36,7 +36,7 @@ const ADULT            = new Tagset("Adult Animation",    [2,3,5,4,1,1,4,3,4,5,1
 const CARTOONNETWORK   = new Tagset("Cartoon Network",    [3,2,3,1,2,1,2,2,1,1,3,2,1,1,1,4,3,1,2,2,3,2,3,2,1,4,4,4,3,4,1,4,4,5,3,1,1,1,1,2], "cartoon-network");
 const NICK             = new Tagset("Nickelodeon",        [2,2,4,4,3,2,4,3,4,2,5,2,3,3,5,2,2,1,1,4,5,1,2,4,4,1,1,4,1,1,2,1,1,2,5,5,2,5,4,4], "nickelodeon");
 const ADULTSWIM        = new Tagset("Adult Swim",         [3,1,1,4,1,2,1,1,1,2,1,5,1,5,1,3,3,3,2,3,1,2,4,1,5,1,4,3,5,5,3,5,5,2,1,1,1,3,1,5], "adult-swim");
-const LOVE            = new Tagset("Love",              [4,4,3,2,3,2,3,2,5,3,5,4,2,2,2,4,1,4,1,1,4,5,5,3,4,4,5,3,2,1,4,2,1,5,3,2,4,3,5,5], "love");
+const LOVE             = new Tagset("Love",               [4,4,3,2,3,2,3,2,5,3,5,4,2,2,2,4,1,4,1,1,4,5,5,3,4,4,5,3,2,1,4,2,1,5,3,2,4,3,5,5], "love");
 const FRIENDSHIP       = new Tagset("Friendship",         [4,4,5,3,3,1,2,4,2,4,2,1,4,2,3,1,1,2,1,1,2,4,5,4,4,5,2,2,5,1,2,4,3,4,4,5,3,4,4,4], "friendship");
 const APOCALYPSE       = new Tagset("Apocalypse",         [1,1,2,1,1,2,1,1,3,3,1,3,2,3,1,3,4,5,1,2,4,3,2,2,3,3,4,2,4,5,5,3,4,1,2,3,5,3,2,5], "apocalypse");
 const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,3,4,4,1,1,2,3,1,2,3,4,3,4,4,3,5,2,2,2,3,5,3,2,2,2,3,5,5,5,5,5,5,4,4,1,1,2,2,1], "dark-comedy");
@@ -233,7 +233,7 @@ function getAjax (url) {
                               <h1>${data.results[el].title}</h1>
                               <p class="ratings">${data.results[el].description}       ${data.results[el].contentRating}</p>
                               <img src=${data.results[el].image} class="result-image"><br>
-                              <h4>${data.results[el].plot}</h4>
+                              <h4 class="ratings">${data.results[el].plot}</h4>
                               <br><hr><br>
                             `);
       });
