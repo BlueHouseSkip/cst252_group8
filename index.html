@@ -4,7 +4,7 @@
  <title>Animation Quiz</title>
  <link rel="stylesheet" type="text/css" href="css/new.css">
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
- <script src="js/imdb-quizwithpercentage.js" defer></script>
+ <script src="js/imdb-quizwithpercentages.js" defer></script>
  <script src="js/misc.js" defer></script>
 <script src="js/lengthchoose.js" defer></script>
  <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
@@ -21,7 +21,6 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
  <!-- Latest compiled Bootstrap JavaScript -->
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
- <script src="js/myscript.js"></script>
  <!-- Mobile-first: ensure proper rendering and touch zooming -->
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -41,12 +40,8 @@
    <!-- Links -->
    <ul class="navbar-nav">
      <li class="nav-item">
-       <a class="nav-link" href="#">Link 1</a>
+       <a class="nav-link" href="#">Old Quiz</a>
      </li>
-     <li class="nav-item">
-       <a class="nav-link" href="#">Link 2</a>
-     </li>
-
      <!-- Dropdown -->
      <li class="nav-item dropdown">
        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -82,6 +77,7 @@
 
    <div id="quiz" class="widget">
      <form>
+     <div id="first10">
      <div class="container">
        <div class="question" id="q1">
         <h2>Question 1</h2>
@@ -93,7 +89,7 @@
          <label><input type="radio" name="1" value="2">the 1990s</label><br>
          <label><input type="radio" name="1" value="3">the 2000s</label><br>
          <label><input type="radio" name="1" value="4">the 2010s</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -105,7 +101,7 @@
          <label><input type="radio" name="2" value="2">I'm kinda messy.</label>
          <label><input type="radio" name="2" value="3">A little clutter is fine.</label><br>
          <label><input type="radio" name="2" value="4">I'm a total clean freak</label>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -117,7 +113,7 @@
          <label><input type="radio" name="3" value="3">Fine.</label><br>
          <label><input type="radio" name="3" value="4">I'm Extroverted</label><br>
          <label><input type="radio" name="3" value="5">I need to be surrounded by people all the time.</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -128,7 +124,7 @@
          <label><input type="radio" name="4" value="2">Fantasy</label><br>
          <label><input type="radio" name="4" value="3">Romance</label>
          <label><input type="radio" name="4" value="4">Comedy</label>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -139,7 +135,7 @@
          <label><input type="radio" name="5" value="2">Sports</label><br>
          <label><input type="radio" name="5" value="3">Reality Television</label>
          <label><input type="radio" name="5" value="3">Cartoons</label>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -148,7 +144,7 @@
         <label style="display: none;"><input type="radio" name="6" value="0" checked="true" class="none">none</label>
          <label><input type="radio" name="6" value="1">City</label>
          <label><input type="radio" name="6" value="2">Country</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -159,7 +155,7 @@
          <label><input type="radio" name="7" value="2">Blue</label><br>
          <label><input type="radio" name="7" value="3">Yellow</label>
          <label><input type="radio" name="7" value="4">Green</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -170,7 +166,7 @@
          <label><input type="radio" name="8" value="2">Eh, there's ok.</label><br>
          <label><input type="radio" name="8" value="3">What can I say, they're my family.</label>
          <label><input type="radio" name="8" value="4">OHANA MEANS FAMILY</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -182,7 +178,7 @@
          <label><input type="radio" name="9" value="3">A free-form adventure, something like Myst</label>
          <label><input type="radio" name="9" value="4">A computer version of a board game</label><br>
          <label><input type="radio" name="9" value="5">You don't care much for video games</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -194,8 +190,10 @@
          <label><input type="radio" name="10" value="3">A car is a car, you don't care</label>
          <label><input type="radio" name="10" value="4">A minivan or station wagon</label><br>
          <label><input type="radio" name="10" value="5">An SUV</label><br>
-       </div>
+       <hr></div>
      </div>
+     </div>
+     <div id="second10">
      <div class="container">
        <div class="question" id="q1">
         <h2>Question 11</h2>
@@ -206,7 +204,7 @@
          <label><input type="radio" name="11" value="3">Go swimming or play with toys</label>
          <label><input type="radio" name="11" value="4">Go for a walk in the woods with your friends or play with your pet</label><br>
          <label><input type="radio" name="11" value="5">Play pretend or play indoor games</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -218,7 +216,7 @@
          <label><input type="radio" name="12" value="3">Never watched "Star Trek" in your life</label>
          <label><input type="radio" name="12" value="4">You've seen "Star Trek" and didn't care for it</label><br>
          <label><input type="radio" name="12" value="5">You HATE "Star Trek" and everything it stands for</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -229,7 +227,7 @@
          <label><input type="radio" name="13" value="2">C's get degrees</label><br>
          <label><input type="radio" name="13" value="3">B everyday baby!!!</label>
          <label><input type="radio" name="13" value="4">STRAIGHT As</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -241,7 +239,7 @@
          <label><input type="radio" name="14" value="3">Recurve Bow and Arrow</label>
          <label><input type="radio" name="14" value="4">Magical Staff</label><br>
          <label><input type="radio" name="14" value="5">My Bare Hands</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -253,7 +251,7 @@
          <label><input type="radio" name="15" value="3">Intelligence</label>
          <label><input type="radio" name="15" value="4">Telepathy</label><br>
          <label><input type="radio" name="15" value="5">Shape Shifter</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -264,7 +262,7 @@
          <label><input type="radio" name="16" value="2">Follower</label><br>
          <label><input type="radio" name="16" value="3">Don't show up</label>
          <label><input type="radio" name="16" value="4">Carries the team</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -276,7 +274,7 @@
          <label><input type="radio" name="17" value="3">DPS</label>
          <label><input type="radio" name="17" value="4">Defense</label><br>
          <label><input type="radio" name="17" value="5">I don’t know what those mean</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -288,7 +286,7 @@
          <label><input type="radio" name="18" value="3">Thunderstorm</label>
          <label><input type="radio" name="18" value="4">Snow!!!</label><br>
          <label><input type="radio" name="18" value="5">Hail.</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -297,7 +295,7 @@
         <label style="display: none;"><input type="radio" name="19" value="0" checked="true" class="none">none</label>
          <label><input type="radio" name="19" value="1">Tea</label>
          <label><input type="radio" name="19" value="2">Coffee</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -308,8 +306,10 @@
          <label><input type="radio" name="20" value="2">Earth</label><br>
          <label><input type="radio" name="20" value="3">Fire</label>
          <label><input type="radio" name="20" value="4">Air</label><br>
-       </div>
+       <hr></div>
      </div>
+    </div>
+    <div id="third10">
      <div class="container">
        <div class="question" id="q1">
         <h2>Question 21</h2>
@@ -320,7 +320,7 @@
          <label><input type="radio" name="21" value="3">Channeling through hobby</label>
          <label><input type="radio" name="21" value="4">Travel</label><br>
          <label><input type="radio" name="21" value="5">Eating</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -332,7 +332,7 @@
          <label><input type="radio" name="22" value="3">Toss and turn a lot</label>
          <label><input type="radio" name="22" value="4">Sleep on your back or side</label><br>
          <label><input type="radio" name="22" value="5">Sleep on your back</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -344,7 +344,7 @@
          <label><input type="radio" name="23" value="3">About 5 and a half feet tall</label>
          <label><input type="radio" name="23" value="4">Less than 5 and half feet tall</label><br>
          <label><input type="radio" name="23" value="5">Less than 5 feet tall</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -356,7 +356,7 @@
          <label><input type="radio" name="24" value="3">About medium length - not buzzed but not long either</label>
          <label><input type="radio" name="24" value="4">A bit long, maybe to your shoulders, because you look better that way</label><br>
          <label><input type="radio" name="24" value="5">Long, as in below your shoulders.</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -368,7 +368,7 @@
          <label><input type="radio" name="25" value="3">Keep mind and body focused</label>
          <label><input type="radio" name="25" value="4">Are more about the spiritual discipline than physical</label><br>
          <label><input type="radio" name="25" value="5">Give a person the confidence that they can handle themselves.</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q2">
@@ -380,7 +380,7 @@
          <label><input type="radio" name="26" value="3">Adaptable</label>
          <label><input type="radio" name="26" value="4">Understanding</label><br>
          <label><input type="radio" name="26" value="5">Compassionate</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
        <div class="question" id="q1">
@@ -392,7 +392,7 @@
            <label><input type="radio" name="27" value="3">Well, car maintenance needs to be done or you'll be walking a lot.</label>
            <label><input type="radio" name="27" value="4">You find it empowering - the power of the engine, the tools, it's great!</label><br>
            <label><input type="radio" name="27" value="5">You don't even know what is under the hood of a car.</label><br>
-       </div>
+       <hr></div>
      </div>
      <div class="container">
      <div class="question" id="q2">
@@ -405,7 +405,7 @@
        <label><input type="radio" name="28" value="3"> Word problems are silly, but they aren't that hard.</label>
        <label><input type="radio" name="28" value="4">Wait, what do they want to know? Word problems always confuse you.</label><br>
        <label><input type="radio" name="28" value="5">You HATE word problems, you've no idea what this is asking you.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q1">
@@ -417,7 +417,7 @@
        <label><input type="radio" name="29" value="3">You might pick up on it at the time, with some clues.</label>
        <label><input type="radio" name="29" value="4">You'd probably figure it out.</label><br>
        <label><input type="radio" name="29" value="5"> You would know right away.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q2">
@@ -429,8 +429,10 @@
        <label><input type="radio" name="30" value="3">It's a bit tricky - you might even look for an easier space.</label>
        <label><input type="radio" name="30" value="4">You'd only park there if there weren't any other spaces open.</label><br>
        <label><input type="radio" name="30" value="5">You'd find another lot or ramp in which to park - FORGET THIS!</label><br>
-     </div>
+     <hr></div>
    </div>
+   </div>
+   <div id="fourth10">
    <div class="container">
      <div class="question" id="q1">
       <h2>Question 31</h2>
@@ -444,7 +446,7 @@
        <label><input type="radio" name="31" value="3">I think the red end is pointing at the floor.</label>
        <label><input type="radio" name="31" value="4">I'm not sure. Maybe the red end is on the bottom again.</label><br>
        <label><input type="radio" name="31" value="5">I've no idea!</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q2">
@@ -456,7 +458,7 @@
        <label><input type="radio" name="32" value="3">You might notice.</label>
        <label><input type="radio" name="32" value="4">You'd probably notice it - and maybe even mention it later.</label><br>
        <label><input type="radio" name="32" value="5">You would notice it right away.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q1">
@@ -468,7 +470,7 @@
        <label><input type="radio" name="33" value="3">You might notice.</label>
        <label><input type="radio" name="33" value="4">You'd probably notice it - and maybe even mention it later.</label><br>
        <label><input type="radio" name="33" value="5">You would notice it right away.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q2">
@@ -480,7 +482,7 @@
        <label><input type="radio" name="34" value="3">If you're going somewhere you put things you need in your pockets.</label>
        <label><input type="radio" name="34" value="4">You generally don't carry stuff in your pockets, maybe keys or some lip balm</label><br>
        <label><input type="radio" name="34" value="5">You never carry things in your pockets</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q1">
@@ -492,7 +494,7 @@
        <label><input type="radio" name="35" value="3">I'd sit there, but I wouldn't be comfortable.</label>
        <label><input type="radio" name="35" value="4">Well, it's better than standing. I might even talk to them.</label><br>
        <label><input type="radio" name="35" value="5"> GREAT! There's an open seat - you plop right down next to the other person.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q2">
@@ -504,7 +506,7 @@
        <label><input type="radio" name="36" value="3"> Because the scene is really a powerful one.</label>
        <label><input type="radio" name="36" value="4">Because there was "something" that just got to you.</label><br>
        <label><input type="radio" name="36" value="5">You got so wrapped up in it, it was like it was happening to you or people you knew.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q1">
@@ -516,7 +518,7 @@
        <label><input type="radio" name="37" value="3">Wolf</label>
        <label><input type="radio" name="37" value="4">Tiger</label><br>
        <label><input type="radio" name="37" value="5">Fox</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q2">
@@ -528,7 +530,7 @@
        <label><input type="radio" name="38" value="3">Groceries or clothing you needed</label>
        <label><input type="radio" name="38" value="4">Clothing or home decor you wanted</label><br>
        <label><input type="radio" name="38" value="5">Clothing accessories or hair care products</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q1">
@@ -540,7 +542,7 @@
        <label><input type="radio" name="39" value="3">Hey, if someone wants to be a vegetarian that's their business.</label>
        <label><input type="radio" name="39" value="4">You've either tried it yourself or were thinking of becoming a vegetarian.</label><br>
        <label><input type="radio" name="39" value="5">You are a vegetarian and you don't believe in eating anything that could think.</label><br>
-     </div>
+     <hr></div>
    </div>
    <div class="container">
      <div class="question" id="q2">
@@ -552,11 +554,14 @@
        <label><input type="radio" name="40" value="3">If it rings you answer, if you need to call someone you dial. So what?</label>
        <label><input type="radio" name="40" value="4">Great for gabbing with your friends for hours on end.</label><br>
        <label><input type="radio" name="40" value="5">You hate telephones, you won't answer one unless you can help it.</label><br>
-     </div>
+     <hr></div>
+   </div>
    </div>
    </form>
  </div>
- <br>
+    <div id="breakline">
+
+    </div>
    <button id="sum">SUBMIT</button><br><br>
 
    <div id="loading" style="display: none;">
