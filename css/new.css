@@ -1,0 +1,147 @@
+body {
+  padding: 10px;
+  font-family: helvetica;
+}
+
+ #q1 {
+   float: left;
+   clear: left;
+   width: 49%;
+   padding-bottom: 2%;
+ }
+
+ #q2 {
+   float: right;
+   clear: right;
+   width: 49%;
+   padding-bottom: 2%;
+ }
+
+.result-image {
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  margin-bottom: 0px !important;
+}
+
+.ratings {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.percent {
+  text-align: center;
+}
+
+#length {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+ #breakline {
+   clear:both;
+ }
+
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+.question-text {
+  text-align: center;
+}
+
+#description {
+  background-color: black;
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+#sum {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  background-color: black;
+  border: none;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-size: 50px;
+  font-family: helvetica;
+  color: white;
+  margin-bottom: 50px;
+}
+
+#sum:hover {
+  background-color: white;
+  border-color: black;
+  border-style: dotted;
+  color: black;
+}
+
+#restart {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5%;
+  background-color: black;
+  border: none;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  font-size: 50px;
+  font-family: helvetica;
+  color: white;
+  margin-bottom: 50px;
+}
+
+#restart:hover {
+  background-color: white;
+  border-color: black;
+  border-style: dotted;
+  color: black;
+}
+
+.ui-checkboxradio-label {
+  text-align: left;
+}
+
+}
+input {
+    visibility:hidden;
+}
+label {
+    cursor: pointer;
+}
+
+.ui-checkboxradio-icon {
+  visibility: hidden;
+}
+
+.ui-button {
+  padding-right: 30%;
+  padding-left: 20%;
+  text-align: left;
+  width: 75%;
+  margin-left: 10%;
+}
+
+h1 {
+  font-size: 150pt;
+}

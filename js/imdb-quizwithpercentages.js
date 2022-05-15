@@ -36,14 +36,14 @@ const ADULT            = new Tagset("Adult Animation",    [2,3,5,4,1,1,4,3,4,5,1
 const CARTOONNETWORK   = new Tagset("Cartoon Network",    [3,2,3,1,2,1,2,2,1,1,3,2,1,1,1,4,3,1,2,2,3,2,3,2,1,4,4,4,3,4,1,4,4,5,3,1,1,1,1,2], "cartoon-network");
 const NICK             = new Tagset("Nickelodeon",        [2,2,4,4,3,2,4,3,4,2,5,2,3,3,5,2,2,1,1,4,5,1,2,4,4,1,1,4,1,1,2,1,1,2,5,5,2,5,4,4], "nickelodeon");
 const ADULTSWIM        = new Tagset("Adult Swim",         [3,1,1,4,1,2,1,1,1,2,1,5,1,5,1,3,3,3,2,3,1,2,4,1,5,1,4,3,5,5,3,5,5,2,1,1,1,3,1,5], "adult-swim");
-const LOVE            = new Tagset("Love",              [4,4,3,2,3,2,3,2,5,3,5,4,2,2,2,4,1,4,1,1,4,5,5,3,4,4,5,3,2,1,4,2,1,5,3,2,4,3,5,5], "love");
+const LOVE             = new Tagset("Love",               [4,4,3,2,3,2,3,2,5,3,5,4,2,2,2,4,1,4,1,1,4,5,5,3,4,4,5,3,2,1,4,2,1,5,3,2,4,3,5,5], "love");
 const FRIENDSHIP       = new Tagset("Friendship",         [4,4,5,3,3,1,2,4,2,4,2,1,4,2,3,1,1,2,1,1,2,4,5,4,4,5,2,2,5,1,2,4,3,4,4,5,3,4,4,4], "friendship");
 const APOCALYPSE       = new Tagset("Apocalypse",         [1,1,2,1,1,2,1,1,3,3,1,3,2,3,1,3,4,5,1,2,4,3,2,2,3,3,4,2,4,5,5,3,4,1,2,3,5,3,2,5], "apocalypse");
 const DARKCOMEDY       = new Tagset("Dark Comedy",        [2,3,4,4,1,1,2,3,1,2,3,4,3,4,4,3,5,2,2,2,3,5,3,2,2,2,3,5,5,5,5,5,5,4,4,1,1,2,2,1], "dark-comedy");
 const MAGIC            = new Tagset("Magic",              [3,2,3,2,1,2,2,3,2,1,4,1,4,4,5,1,1,3,1,4,3,4,5,5,5,4,1,1,1,3,1,1,3,1,5,5,5,4,4,2], "magic");
 const SURREALISM       = new Tagset("Surrealism",         [0,4,4,3,1,1,3,3,5,5,1,4,4,2,2,2,5,1,2,1,3,2,1,3,5,2,3,3,2,5,3,4,2,4,4,4,3,3,4,1], "surrealism");
 
-const TAGSET_ARRAY = [MONSTER, SATIRE, ADULT, CARTOONNETWORK, NICK, ADULTSWIM, WEIRD, FRIENDSHIP, APOCALYPSE, DARKCOMEDY, MAGIC, SURREALISM];
+const TAGSET_ARRAY = [MONSTER, SATIRE, ADULT, CARTOONNETWORK, NICK, ADULTSWIM, LOVE, FRIENDSHIP, APOCALYPSE, DARKCOMEDY, MAGIC, SURREALISM];
 
 // Show the quiz if its hidden, hide it if its shown
 function toggleQuizVisibility(hideOnly=false) {
@@ -75,6 +75,9 @@ $("#sum").click(function() {
     return;
   }
   $("#sum").toggle();
+  if($(".jumbotron").is(":visible")) {
+    $(".jumbotron").toggle();
+  }
   let inputAnswers = []; // Declares for use later
   // * grabs every element on the page with the attribute 'checked'
   //   If a non-quiz answer element is somehow marked as 'checked' this will likely break the quiz.
@@ -105,8 +108,8 @@ $("#sum").click(function() {
 
   var simPercent = Math.round (similarityArray[index]/40 *100)
   $("#output").append(`<div>
-                        <h1>${simPercent}%</h1>
-                        <p>Based on your answers we also found that you hsve similar answers to ${TAGSET_ARRAY[index].name}</p>
+                        <h4 class="percent">Your answers are ${simPercent}% suited for ${TAGSET_ARRAY[index].name}</h4>
+                        </div>
                       `);
 
   var imdbUrl = "https://imdb-api.com/API/AdvancedSearch/k_636sci65?num_votes=1000,&title_type=tv_series&genres=animation&keywords=" + tagSet +"&sort=user_rating,desc";
@@ -139,7 +142,7 @@ $("#restart").click(function () {
   resetQuiz();
   hideResults();
   toggleQuizVisibility();
-
+  $(".jumbotron").toggle();
   $("#header").toggle();
   $("#sum").toggle();
   //$('#input').prop('checked',false);  // refreshes JQueryUI to reflect accurate state of the quiz
@@ -156,13 +159,13 @@ setInterval(obnoxiousFlash,700);
 
 
 
-function obnoxiousFlash () {
-  if($("#sum").css("background-color") == "rgb(255, 255, 0)") {
-    $("#sum").css("background-color", "red");
-  } else {
-    $("#sum").css("background-color", "yellow");
-  }
-}
+// function obnoxiousFlash () {
+//   if($("#sum").css("background-color") == "rgb(255, 255, 0)") {
+//     $("#sum").css("background-color", "red");
+//   } else {
+//     $("#sum").css("background-color", "yellow");
+//   }
+// }
 
 
 
@@ -228,9 +231,10 @@ function getAjax (url) {
 
         $("#output").append(`<div>
                               <h1>${data.results[el].title}</h1>
-                              <p>${data.results[el].description}       ${data.results[el].contentRating}</p>
-                              <img src=${data.results[el].image}>
-                              <h4>${data.results[el].plot}</h4>
+                              <p class="ratings">${data.results[el].description}       ${data.results[el].contentRating}</p>
+                              <img src=${data.results[el].image} class="result-image"><br>
+                              <h4 class="ratings">${data.results[el].plot}</h4>
+                              <br><hr><br>
                             `);
       });
       callConfetti();
