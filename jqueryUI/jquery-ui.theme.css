@@ -114,7 +114,7 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
 	border: 1px solid #003eff;
-	background: linear-gradient(to right, black , lightslategray);
+	background: linear-gradient(to right, lightslategrey , black);
 	font-weight: normal;
 	color: #ffffff;
 }
