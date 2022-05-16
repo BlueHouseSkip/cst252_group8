@@ -17,7 +17,7 @@
 
 
 // weight is how much to count each question as. decimal percent so 1 is 100%, .5 is 50%, 2 is 200%, etc.
-const WEIGHT = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+const WEIGHT = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
 // CURRENTLY 21 QUESTIONS
 
@@ -60,18 +60,18 @@ function Cartoon (name, answersArray, element) {
 
         each new cartoon must be declared and then added to the CARTOON_ARRAY variable.
 */
-const GRAVITYFALLS    = new Cartoon("Gravity Falls",              [3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1,2], "#gravityfalls");
-const RICKNMORTY      = new Cartoon("Rick and Morty",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3], "#ricknmorty");
-const STARWARS        = new Cartoon("Star Wars: the Clone Wars",  [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3], "#starwars");
-const SAILORMOON      = new Cartoon("Sailor Moon",                [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5], "#sailormoon");
-const STEVEN          = new Cartoon("Steven Universe",            [3,2,4,2,2,2,3,4,5,4,4,1,4,2,5,1,1,1,1,2,3], "#steven");
-const ARCANE          = new Cartoon("Arcane",                     [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1], "#arcane");
-const REGULAR         = new Cartoon("Regular Show",               [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1], "#regular");
-const MIDNIGHT        = new Cartoon("Midnight Gospel",            [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3], "#midnight");
-const ONEPIECE        = new Cartoon("One Piece",                  [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4], "#onepiece");
-const SPONGEBOB       = new Cartoon("Spongebob Squarepants",      [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4], "#spongebob");
-const POKEMON         = new Cartoon("Pokemon",                    [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4], "#pokemon");
-const AVATAR          = new Cartoon("Avatar",                     [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2], "#avatar");
+const GRAVITYFALLS    = new Cartoon("Gravity Falls",              [3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1,2,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#gravityfalls");
+const RICKNMORTY      = new Cartoon("Rick and Morty",             [1,2,1,1,2,1,4,1,5,5,3,4,1,4,3,3,3,1,2,4,3,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#ricknmorty");
+const STARWARS        = new Cartoon("Star Wars: the Clone Wars",  [3,2,3,1,2,1,2,3,1,2,5,1,3,1,4,1,3,4,1,3,3,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#starwars");
+const SAILORMOON      = new Cartoon("Sailor Moon",                [1,1,5,3,2,1,3,4,5,4,1,5,1,5,3,1,4,1,2,2,5,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#sailormoon");
+const STEVEN          = new Cartoon("Steven Universe",            [3,2,4,2,2,2,3,4,5,4,4,1,4,2,5,1,1,1,1,2,3,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#steven");
+const ARCANE          = new Cartoon("Arcane",                     [2,1,2,1,2,1,2,4,4,3,5,2,2,5,1,3,1,3,2,3,1,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#arcane");
+const REGULAR         = new Cartoon("Regular Show",               [3,1,3,1,2,1,2,2,1,2,1,2,1,1,1,4,2,1,2,3,1,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#regular");
+const MIDNIGHT        = new Cartoon("Midnight Gospel",            [2,2,2,2,2,2,4,4,4,3,4,1,3,4,4,3,1,2,2,2,3,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#midnight");
+const ONEPIECE        = new Cartoon("One Piece",                  [2,2,4,2,1,2,1,4,3,5,2,3,2,5,1,1,5,5,1,1,4,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#onepiece");
+const SPONGEBOB       = new Cartoon("Spongebob Squarepants",      [2,1,5,3,3,2,3,2,3,3,1,3,2,3,5,2,2,5,1,1,4,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#spongebob");
+const POKEMON         = new Cartoon("Pokemon",                    [4,2,4,3,1,2,3,3,5,4,2,2,3,2,2,1,1,1,1,2,4,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#pokemon");
+const AVATAR          = new Cartoon("Avatar",                     [4,1,2,2,3,2,2,4,4,5,1,3,2,3,2,2,2,2,1,3,2,3,2,4,3,1,2,1,4,2,4,4,2,4,1,4,1,3,1,1,1], "#avatar");
 
 const CARTOON_ARRAY = [GRAVITYFALLS, RICKNMORTY, STARWARS, SAILORMOON, STEVEN, ARCANE, REGULAR, MIDNIGHT, ONEPIECE, SPONGEBOB, POKEMON, AVATAR];
 
