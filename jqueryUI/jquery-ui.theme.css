@@ -116,7 +116,7 @@ a.ui-button:active,
 	border: 1px solid #003eff;
 	background: linear-gradient(to right, lightslategrey , black);
 	font-weight: normal;
-	color: #ffffff;
+	color: white;
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
